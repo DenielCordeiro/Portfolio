@@ -4,12 +4,20 @@
       <div class="col-1">
         <app-sidebar></app-sidebar>
       </div>
-      <div class="col" style="background-color: aqua;">
-        <app-header></app-header>
-        <app-home></app-home>
+      <div class="col body">
+        <div>
+          <app-header></app-header>
+        </div>
+        <div class="pt-5">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+<!-- <div class="greetings">
+  <app-greetings></app-greetings>
+</div> -->

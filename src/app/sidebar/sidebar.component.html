@@ -1,5 +1,25 @@
 <section class="sidebar">
   <div class="container">
-
+    <ul>
+      <li class="mb-4">
+        <a [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <i class="bi bi-house-heart-fill"></i>
+          <!-- <span class="mx-4">{{ sidebar.home }}</span> -->
+          <span class="mx-4">test</span>
+        </a>
+      </li>
+      <li class="mb-4">
+        <a [routerLink]="['/projects']" routerLinkActive="router-link-active">
+          <i class="bi bi-layers-fill"></i>
+          <span class="mx-4">test</span>
+        </a>
+      </li>
+      <li class="mb-4">
+        <a [routerLink]="['/about']" routerLinkActive="router-link-active">
+          <i class="bi bi-person-lines-fill"></i>
+          <span class="mx-4">test</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>
