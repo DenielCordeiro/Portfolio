@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { TimeLineComponent } from './home/time-line/time-line.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ProjectsComponent } from './projects/projects.component';
     HomeComponent,
     SidebarComponent,
     FooterComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    TimeLineComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
