@@ -3,5 +3,14 @@
     "home": "Home",
     "projects": "Projetos",
     "about":  "Sobre"
-  }
+  },
+
+  "home": {},
+
+  "projects": {},
+
+  "about": {},
+
+  "greetings": "to my portfolio",
+  "footer": "By Cordeiro, Daniel"
 }
