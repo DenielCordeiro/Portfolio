@@ -5,7 +5,13 @@
     "about":  "Sobre"
   },
 
-  "home": {},
+  "home": {
+    "time-line": {
+      "electrical-supply-store": "Loja de Material Elétrico",
+      "home-instagram": "Paginá Inicial do Instagram",
+      "search-movies": "Buscar Filmes"
+    }
+  },
 
   "projects": {},
 
