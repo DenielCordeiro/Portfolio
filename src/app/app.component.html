@@ -1,22 +1,16 @@
 <div class="main">
   <div class="container">
     <div class="row">
-      <div class="col-1">
-        <app-sidebar></app-sidebar>
-      </div>
-      <div class="col body">
-        <div>
-          <app-header></app-header>
-        </div>
-        <div class="pt-5">
-          <router-outlet></router-outlet>
-        </div>
-      </div>
+      <app-header></app-header>
+    </div>
+
+    <div class="row mt-5">
+      <router-outlet></router-outlet>
     </div>
   </div>
-</div>
 
-<app-footer></app-footer>
+  <app-footer></app-footer>
+</div>
 
 <!-- <div class="greetings">
   <app-greetings></app-greetings>

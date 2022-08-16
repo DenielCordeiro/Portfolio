@@ -3,5 +3,50 @@
     "home": "Home",
     "projects": "Projetos",
     "about":  "Sobre"
-  }
+  },
+
+  "home": {
+    "time-line": {
+      "electrical-supply-store": "Loja de Material Elétrico",
+      "home-instagram": "Paginá Inicial do Instagram",
+      "search-movies": "Buscar Filmes"
+    }
+  },
+
+  "projects": {
+    "movie": {
+      "title": "APi de Filmes",
+      "tecnology": "Angular 9 or + and Ionic 5 or +",
+      "subtitle": "Projeto voltado a usar Ionic. Aplicações tanto para Android e IOS",
+      "description": ""
+    },
+    "electrical-store": {
+      "title": "Loja de Materias Elétricos",
+      "tecnology": "HTML5, SASS",
+      "subtitle": "Projeto voltado a usar edições com SASS.",
+      "description": ""
+    }
+  },
+
+  "about": {
+    "who-am-I": {
+      "line": "_ Olá, eu sou o Daniel.",
+      "line2": "_ Tenho 21 anos e moro com meus pais.",
+      "line3": "_ Sou Desenvolvedor Front-end, JS <3.",
+      "line4": "_ Meu hobby é andar de skate e tocar violão.",
+      "line5": "_ Eu tenho uma meta de ser um Desenvolvedor de sucesso, com vários projetos e um domínio de todas a linguagens que eu utilizar"
+    },
+    "courses": {
+      "title": "Meu trajeto até os dias atuais:",
+      "line": "ETEC - Técnico em Informatica para Internet (2016-2018)",
+      "line2": "CEUNSP - Ciências da Computação (2019 - ?)",
+      "line3": "Followize - Estágio em (2020-2021), Desenvolvedor Front-end Junior I (2021-2022)"
+    },
+    "linkedin": "LINKEDIN",
+    "github": "GITHUB",
+    "instagram": "INSTAGRAM"
+  },
+
+  "greetings": "to my portfolio",
+  "footer": "By Cordeiro, Daniel"
 }
