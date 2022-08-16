@@ -13,7 +13,20 @@
     }
   },
 
-  "projects": {},
+  "projects": {
+    "movie": {
+      "title": "APi de Filmes",
+      "tecnology": "Angular 9 or + and Ionic 5 or +",
+      "subtitle": "Projeto voltado a usar Ionic. Aplicações tanto para Android e IOS",
+      "description": ""
+    },
+    "electrical-store": {
+      "title": "Loja de Materias Elétricos",
+      "tecnology": "HTML5, SASS",
+      "subtitle": "Projeto voltado a usar edições com SASS.",
+      "description": ""
+    }
+  },
 
   "about": {
     "who-am-I": {
