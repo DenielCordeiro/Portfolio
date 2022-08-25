@@ -9,6 +9,9 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   result: any;
   urlToJson = 'assets/pt.json';
+  expirationCounter: any;
+  counter: number = 15;
+  greetings: boolean = true;
 
   constructor(public http: HttpClient) {
   }
@@ -17,5 +20,24 @@ export class AppComponent implements OnInit {
     this.http.get<any>(this.urlToJson).subscribe(response => {
       this.result = response;
     });
+
+    this.doTimer();
+  }
+
+  delay(delay: number) {
+    return new Promise(r => {
+        setTimeout(r, delay);
+    })
+  }
+
+  async doTimer() {
+    for (let i = 0; i < this.counter; i++) {
+      await this.delay(1000);
+      this.counter = this.counter - 1;
+
+      if (this.counter == 7) {
+        this.greetings = false;
+      }
+    }
   }
 }

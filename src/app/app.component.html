@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main" *ngIf="!greetings">
   <div class="container">
     <div class="row">
       <app-header></app-header>
@@ -12,6 +12,6 @@
   <app-footer></app-footer>
 </div>
 
-<!-- <div class="greetings">
+<div class="greetings" *ngIf="greetings">
   <app-greetings></app-greetings>
-</div> -->
+</div>
