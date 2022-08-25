@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.sass']
 })
 export class ProjectsComponent implements OnInit {
+  eletricalSuplyStoreGit: string = 'https://github.com/DenielCordeiro/Eletrical-supply-store';
+  homePageInstagramGit: string = 'https://github.com/DenielCordeiro/home-page-Instagram';
 
   constructor() { }
 
