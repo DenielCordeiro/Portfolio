@@ -11,6 +11,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TimeLineComponent } from './home/time-line/time-line.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
