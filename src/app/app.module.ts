@@ -13,6 +13,7 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,

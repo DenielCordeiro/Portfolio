@@ -6,32 +6,54 @@
   },
 
   "home": {
-    "timeLine": {
-      "electricalSupplyStore": "Loja de Material Elétrico",
-      "homeInstagram": "Paginá Inicial do Instagram",
-      "searchMovies": "Buscar Filmes"
+    "timeline": {
+      "title": "Welcome",
+      "subtitle": "Desenvolvido com Angular v.14 | Bootstrap v.5",
+      "description": "Este Portfólio está em desenvolvimento, aqui alocara alguma mensagem sobre o mesmo",
+      "angular": {
+        "button": "Angular",
+        "about": "Angular é uma plataforma de aplicações web de código-fonte aberto e front-end baseado em TypeScript, liderado pela Equipe Angular do Google e por uma comunidade de indivíduos e corporações. Angular é uma reescrita completa do AngularJS, feito pela mesma equipe que o construiu."
+      },
+      "bootstrap": {
+        "button": "Bootstrap",
+        "about": "Bootstrap é um framework front-end gratuito para desenvolvimento web mais rápido e fácil. Bootstrap inclui modelos de design baseados em HTML e CSS para tipografia, formulários, botões, tabelas, navegação, modais, carrosséis de imagens e muitos outros, bem como plugins JavaScript opcionais. O Bootstrap também oferece a capacidade de criar facilmente designs responsivos."
+      }
     }
   },
 
   "projects": {
-    "homePageInstagram": {
-      "title": "Página Inicial do Instagram",
-      "tecnology": "HTML5, SASS",
-      "subtitle": "Projeto voltado a usar edições com SASS.",
-      "description": ""
-    },
     "electricalSuplyStore": {
       "title": "Loja de Materias Elétricos",
-      "tecnology": "HTML5, SASS",
       "subtitle": "Projeto voltado a usar edições com SASS.",
-      "description": ""
+      "date": "",
+      "description": {
+        "line": "Criado acompanhado o curso de 'SASS' na plataforma da Udemy, com o professor Matheus Battisti. ",
+        "line2": "Este projeto traz boas praticas do SASS e uma reponsividade para dispositivos Mobile."
+      },
+      "extra": "Imagens do projeto adicionadas por link."
+    },
+    "homePageInstagram": {
+      "title": "Página Inicial do Instagram",
+      "subtitle": "Projeto voltado a usar edições com SASS.",
+      "date": "",
+      "description": {
+        "line": "Esse foi meu primeiro projeto pessoal usando SASS. ",
+        "line2": "Desenvolver a cópia da tela inicial do Instagram com a tecnologia foi um desafio. ",
+        "line3": "Passei por dificuldes em entender como se utiliza os mixins e os plugins, ainda tenho que praticar muito os mesmos. ",
+        "line4": "As vantagens de se utilizar Sass são facinantes, agilizar a criação de seu código e deixa-lo bem organizado reduzindo até mesmo á repetição de códigos."
+      },
+      "extra": "Saudades Ponto e Virgula."
     },
     "movie": {
-      "title": "APi de Filmes",
+      "title": "API de Filmes",
       "tecnology": "Angular 9 or + and Ionic 5 or +",
-      "subtitle": "Projeto voltado a usar Ionic. Aplicações tanto para Android e IOS",
+      "subtitle": "Projeto voltado a usar o Framework Ionic.",
+      "date": "",
       "description": ""
-    }
+    },
+    "github": "GitHub",
+    "seeProject": "Ver Projeto",
+    "close": "Fechar"
   },
 
   "about": {
