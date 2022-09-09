@@ -4,10 +4,26 @@
   display: flex
   justify-content: center
 
-  .card
-    align-items: center
+  a
+    text-decoration: none
 
-    &:hover
-      border: 1px solid variables.$black
+    .card
+      align-items: center
+      color: variables.$black
 
+      &:hover
+        border: 1px solid variables.$black
+
+      .images
+        text-align: end
+
+        img
+          width: 30px
+          height: 30px
+
+  hr
+    width: 96%
+
+  summary
+    text-align: justify
 

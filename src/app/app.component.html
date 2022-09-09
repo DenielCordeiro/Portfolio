@@ -1,6 +1,6 @@
-<div class="main">
-  <div class="container">
-    <div class="row">
+<div class="container" *ngIf="!greetings">
+  <div class="text-center">
+    <div class="row pt-3">
       <app-header></app-header>
     </div>
 
@@ -8,10 +8,12 @@
       <router-outlet></router-outlet>
     </div>
   </div>
-
-  <app-footer></app-footer>
 </div>
 
-<!-- <div class="greetings">
+<div class="greetings" *ngIf="greetings">
   <app-greetings></app-greetings>
-</div> -->
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

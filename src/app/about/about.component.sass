@@ -1,3 +1,5 @@
+@use '../../assets/sass/variables'
+
 .image
   display: flex
   justify-content: center
@@ -8,3 +10,34 @@
 
 svg
   width: 45px
+
+#grid-about
+  margin-top: 8%
+  //trabalhar margim com mixins, usar versão meio da tela pc e tv e superior mobile.
+
+#social-media
+  position: fixed
+  bottom: 0
+  width: 99%
+
+  a
+    text-decoration: none
+
+  .linkedin
+    color: variables.$white
+
+    &:hover
+      color: variables.$black
+
+  .github
+    color: variables.$white
+
+    &:hover
+      color: variables.$black
+
+  .instagram
+    color: variables.$white
+
+    &:hover
+      color: variables.$black
+
