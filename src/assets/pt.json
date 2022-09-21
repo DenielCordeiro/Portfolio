@@ -6,8 +6,8 @@
   },
 
   "home": {
-    "timeline": {
-      "title": "Welcome",
+    "tecnology": {
+      "title": "Tecnologias utilizadas",
       "subtitle": "Desenvolvido com Angular v.14 | Bootstrap v.5",
       "description": "Este Portfólio está em desenvolvimento, aqui alocara alguma mensagem sobre o mesmo",
       "angular": {
