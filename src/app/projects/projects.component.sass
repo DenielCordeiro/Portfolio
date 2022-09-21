@@ -1,4 +1,5 @@
 @use '../../assets/sass/variables'
+@use '../../assets/sass/mixins'
 
 .container
   display: flex
@@ -21,9 +22,15 @@
           width: 30px
           height: 30px
 
+
   hr
     width: 96%
 
-  summary
+  .summary
     text-align: justify
 
+    @include mixins.mobile
+      display: none
+
+      summary
+        display: flex
