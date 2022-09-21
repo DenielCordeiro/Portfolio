@@ -1,4 +1,5 @@
 @use '../../assets/sass/variables'
+@use '../../assets/sass/mixins'
 
 .image
   display: flex
@@ -13,7 +14,20 @@ svg
 
 #grid-about
   margin-top: 8%
-  //trabalhar margim com mixins, usar versão meio da tela pc e tv e superior mobile.
+
+  .text-mobile
+    display: none
+
+  @include mixins.mobile
+    .text-mobile
+      display: inline
+
+    .side-text
+      display: none
+
+@include mixins.mobile
+  #grid-about
+    margin-top: 0%
 
 #social-media
   position: fixed

@@ -1,19 +1,29 @@
 <section id="grid-about">
   <div class="container text-center">
     <div class="row">
-      <div class="col text-start">
+      <div class="text-mobile">
+        <p>
+          <span>{{ result?.about.whoAmI.line }}</span><br>
+          <span>{{ result?.about.whoAmI.line3 }}</span><br>
+          <span>{{ result?.about.whoAmI.line5 }}</span>
+        </p>
+      </div>
+
+      <div class="col text-start side-text">
         <p>{{ result?.about.whoAmI.line }}</p>
         <p>{{ result?.about.whoAmI.line2 }}</p>
         <p>{{ result?.about.whoAmI.line3 }}</p>
         <p>{{ result?.about.whoAmI.line4 }}</p>
         <p>{{ result?.about.whoAmI.line5 }}</p>
       </div>
+
       <div class="col">
         <p class="image">
           <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFSQT14PlUp7A/profile-displayphoto-shrink_800_800/0/1658067220290?e=1665619200&v=beta&t=ZJ69A0cOscfBX6az7ICOwqh23S0n6DDM9h2ThPI92vE" alt="">
         </p>
       </div>
-      <div class="col text-end">
+
+      <div class="col text-end side-text">
         <h3 class="mb-4">{{ result?.about.courses.title }}</h3>
         <p>{{ result?.about.courses.line }}</p>
         <p>{{ result?.about.courses.line2 }}</p>
@@ -22,6 +32,8 @@
       </div>
     </div>
   </div>
+
+
 </section>
 
 <section id="social-media">
