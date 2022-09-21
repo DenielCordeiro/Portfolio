@@ -6,10 +6,9 @@ import { AppComponent } from './app.component';
 import { GreetingsComponent } from './greetings/greetings.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { TecnologyComponent } from './home/tecnology/tecnology.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { TimeLineComponent } from './home/time-line/time-line.component';
-import { CarouselComponent } from './home/carousel/carousel.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,10 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     GreetingsComponent,
     AboutComponent,
     HomeComponent,
+    TecnologyComponent,
     FooterComponent,
     ProjectsComponent,
-    TimeLineComponent,
-    CarouselComponent,
     HeaderComponent
   ],
   imports: [

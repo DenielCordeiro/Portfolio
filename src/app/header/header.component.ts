@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+
+  }
 
   ngOnInit(): void {
   }
