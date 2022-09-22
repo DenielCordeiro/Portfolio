@@ -17,6 +17,18 @@
       "bootstrap": {
         "button": "Bootstrap",
         "about": "Bootstrap é um framework front-end gratuito para desenvolvimento web mais rápido e fácil. Bootstrap inclui modelos de design baseados em HTML e CSS para tipografia, formulários, botões, tabelas, navegação, modais, carrosséis de imagens e muitos outros, bem como plugins JavaScript opcionais. O Bootstrap também oferece a capacidade de criar facilmente designs responsivos."
+      },
+      "sass": {
+        "button": "Sass",
+        "about": ""
+      },
+      "javascript": {
+        "button": "JavaScript",
+        "about": ""
+      },
+      "typescript": {
+        "button": "TypeScript",
+        "about": ""
       }
     }
   },
@@ -30,7 +42,7 @@
         "line": "Criado acompanhado o curso de 'SASS' na plataforma da Udemy, com o professor Matheus Battisti. ",
         "line2": "Este projeto traz boas praticas do SASS e uma reponsividade para dispositivos Mobile."
       },
-      "extra": "Imagens do projeto adicionadas por link."
+      "extra": "test"
     },
     "homePageInstagram": {
       "title": "Página Inicial do Instagram",
@@ -42,7 +54,7 @@
         "line3": "Passei por dificuldes em entender como se utiliza os mixins e os plugins, ainda tenho que praticar muito os mesmos. ",
         "line4": "As vantagens de se utilizar Sass são facinantes, agilizar a criação de seu código e deixa-lo bem organizado reduzindo até mesmo á repetição de códigos."
       },
-      "extra": "Saudades Ponto e Virgula."
+      "extra": "test"
     },
     "movie": {
       "title": "API de Filmes",
