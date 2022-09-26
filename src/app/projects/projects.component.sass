@@ -1,9 +1,18 @@
 @use '../../assets/sass/variables'
 @use '../../assets/sass/mixins'
 
-.container
+#title
+  span
+    margin-left: 69%
+    color: variables.$dark-gray
+
+    @include mixins.mobile
+      margin-left: 0%
+
+.contents
   display: flex
   justify-content: center
+  padding-bottom: 5vh
 
   a
     text-decoration: none
@@ -35,7 +44,18 @@
       summary
         display: flex
 
+  .modal-body
+    text-align: justify
 
-  .img-modal
-    height: 70vh
-    width: 100%
+    .img-modal
+      height: 70vh
+      width: 100%
+
+      @include mixins.mobile
+        display: none
+
+    .about-project
+      display: none
+
+      @include mixins.mobile
+        display: inline

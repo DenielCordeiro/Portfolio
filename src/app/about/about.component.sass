@@ -9,25 +9,26 @@
     width: 75%
     border-radius: 50%
 
+    @include mixins.mobile
+      width: 55%
+      border-radius: 50%
+
+
 svg
   width: 45px
 
 #grid-about
-  margin-top: 8%
-
   .text-mobile
     display: none
 
   @include mixins.mobile
     .text-mobile
+      margin: -5vh 0 2vh 0
       display: inline
+      text-align: justify
 
     .side-text
       display: none
-
-@include mixins.mobile
-  #grid-about
-    margin-top: 0%
 
 #social-media
   position: fixed
@@ -36,22 +37,9 @@ svg
 
   a
     text-decoration: none
-
-  .linkedin
     color: variables.$white
 
-    &:hover
-      color: variables.$black
-
-  .github
-    color: variables.$white
-
-    &:hover
-      color: variables.$black
-
-  .instagram
-    color: variables.$white
-
+  .text-icon
     &:hover
       color: variables.$black
 
