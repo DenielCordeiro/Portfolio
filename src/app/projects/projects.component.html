@@ -1,7 +1,13 @@
-<section id="projects-cards">
-  <div class="container">
-    <div class="row">
+<section id="title">
+  <div class="container text-start mb-5">
+    <h2>{{ result?.projects.title }}</h2>
+    <span><strong>*</strong> Clique sobre o projeto para mais informações <strong>!</strong></span>
+  </div>
+</section>
 
+<section id="projects-cards">
+  <div class="container contents">
+    <div class="row">
       <a href="#" data-bs-toggle="modal" data-bs-target="#electricalSuplyStoreModal">
         <div class="card p-4">
           <div class="row text-secundary">
@@ -9,8 +15,6 @@
               <summary>
                 <span>{{ result?.projects.electricalSuplyStore.description.line }}</span>
                 <span>{{ result?.projects.electricalSuplyStore.description.line2 }}</span>
-
-                <h6 class="text-end pt-3">{{ result?.projects.electricalSuplyStore.extra}}</h6>
               </summary>
             </div>
             <div class="col text-center">
@@ -28,15 +32,22 @@
       </a>
 
       <div class="modal fade" id="electricalSuplyStoreModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">{{ result?.projects.electricalSuplyStore.title }}</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
             <div class="modal-body">
-              ...
+              <img class="img-modal" src="../../assets/img/eletrical-suply-store/1.png" alt="">
+
+              <div class="about-project container">
+                <span>{{ result?.projects.electricalSuplyStore.description.line }}</span>
+                <span>{{ result?.projects.electricalSuplyStore.description.line2 }}</span>
+              </div>
             </div>
+
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ result?.projects.close }}</button>
               <a href="{{ electricalSuplyStoreGit }}" type="button" class="btn btn-dark" target="_blank">{{ result?.projects.github }}</a>
@@ -57,8 +68,6 @@
                 <span>{{ result?.projects.homePageInstagram.description.line2 }}</span>
                 <span>{{ result?.projects.homePageInstagram.description.line3 }}</span>
                 <span>{{ result?.projects.homePageInstagram.description.line4 }}</span>
-
-                <h6 class="text-end pt-3">{{ result?.projects.homePageInstagram.extra}}</h6>
               </summary>
             </div>
             <div class="col text-center">
@@ -82,9 +91,18 @@
               <h5 class="modal-title" id="exampleModalLabel">{{ result?.projects.homePageInstagram.title }}</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
             <div class="modal-body">
               <img class="img-modal" src="../../assets/img/home-page-instagram/home.png" alt="">
+
+              <div class="about-project container">
+                <span>{{ result?.projects.homePageInstagram.description.line }}</span>
+                <span>{{ result?.projects.homePageInstagram.description.line2 }}</span>
+                <span>{{ result?.projects.homePageInstagram.description.line3 }}</span>
+                <span>{{ result?.projects.homePageInstagram.description.line4 }}</span>
+              </div>
             </div>
+
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ result?.projects.close }}</button>
               <a href="{{ homePageInstagramGit }}" type="button" class="btn btn-dark" target="_blank">{{ result?.projects.github }}</a>
