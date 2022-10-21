@@ -1,0 +1,27 @@
+import {Pipe, PipeTransform} from '@angular/core';
+import {TranslateService } from 'ngx-loop-components';
+
+@Pipe({
+    name: 'translate',
+    pure: false
+})
+export class TranslatePipe implements PipeTransform {
+
+    constructor(
+        private translate: TranslateService
+    ) {}
+
+
+    transform(keys: string): string {
+        try {
+            let finalstr = '';
+            for(let key of keys.split(' ')){
+                let translated:string = (this.translate.data[key] != null)?this.translate.data[key]:key;
+                finalstr += (finalstr!=''?' ':'') + translated;
+            }
+            return finalstr;
+        } catch (e) {
+            return keys;
+        }
+    }
+}
