@@ -22,7 +22,7 @@ export class ProjectsComponent implements OnInit {
       this.result = response;
     });
 
-    config.interval = 10000;
+    config.interval = 7000;
 		config.wrap = false;
 		config.keyboard = false;
 		config.pauseOnHover = false;
