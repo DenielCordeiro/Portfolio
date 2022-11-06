@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { GreetingsComponent } from './greetings/greetings.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { TecnologyComponent } from './home/tecnology/tecnology.component';
+import { TecnologyComponent } from './about/tecnology/tecnology.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HeaderComponent } from './header/header.component';
