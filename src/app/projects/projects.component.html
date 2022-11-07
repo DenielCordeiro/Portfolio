@@ -40,7 +40,23 @@
             </div>
 
             <div class="modal-body">
-              <img class="img-modal" src="../../assets/img/eletrical-suply-store/1.png" alt="">
+              <ngb-carousel>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img class="img-modal" src="../../assets/img/eletrical-suply-store/1.png" alt="Random first slide" />
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img class="img-modal" src="../../assets/img/eletrical-suply-store/2.png" alt="Random second slide" />
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img class="img-modal" src="../../assets/img/eletrical-suply-store/3.png" alt="Random third slide" />
+                  </div>
+                </ng-template>
+              </ngb-carousel>
 
               <div class="about-project container">
                 <span>{{ result?.projects.electricalSuplyStore.description.line }}</span>
@@ -111,6 +127,7 @@
           </div>
         </div>
       </div>
+
 
       <!-- <hr class="my-3">
 
