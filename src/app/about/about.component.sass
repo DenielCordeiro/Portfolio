@@ -1,5 +1,5 @@
 @use '../../assets/sass/variables'
-@use '../../assets/sass/mixins'
+@use '../../assets/sass/mixins-small'
 
 .image
   display: flex
@@ -10,7 +10,7 @@
     height: 250px
     border-radius: 50%
 
-    @include mixins.mobile
+    @include mixins-small.display
       width: 45%
       height: 160px
       border-radius: 50%
@@ -23,7 +23,7 @@ svg
   .text-mobile
     display: none
 
-  @include mixins.mobile
+  @include mixins-small.display
     .text-mobile
       margin: -5vh 0 2vh 0
       display: inline

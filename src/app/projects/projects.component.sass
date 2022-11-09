@@ -1,12 +1,12 @@
 @use '../../assets/sass/variables'
-@use '../../assets/sass/mixins'
+@use '../../assets/sass/mixins-small'
 
 #title
   span
     margin-left: 69%
     color: variables.$dark-gray
 
-    @include mixins.mobile
+    @include mixins-small.display
       margin-left: 0%
 
 .contents
@@ -38,7 +38,7 @@
   .summary
     text-align: justify
 
-    @include mixins.mobile
+    @include mixins-small.display
       display: none
 
       summary
@@ -53,11 +53,11 @@
       border: 1px solid variables.$white
       border-radius: 2%
 
-      @include mixins.mobile
+      @include mixins-small.display
         display: none
 
     .about-project
       display: none
 
-      @include mixins.mobile
+      @include mixins-small.display
         display: inline

@@ -1,5 +1,5 @@
 @use '../../assets/sass/variables'
-@use '../../assets/sass/mixins'
+@use '../../assets/sass/mixins-medium'
 
 *
   padding: 0
@@ -81,13 +81,13 @@
 
 
 .welcome
-  @include mixins.mobile
+  @include mixins-medium.display
     display: none
 
 .welcome-mobile
   display: none
 
-  @include mixins.mobile
+  @include mixins-medium.display
     display: inline
 
     .waviy-mobile
