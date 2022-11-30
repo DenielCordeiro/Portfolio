@@ -1,0 +1,71 @@
+<div class="card my-5">
+  <div class="card-body">
+
+    <h5 class="card-title">{{ result?.home.contact.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ result?.home.contact.subtile }}</h6>
+
+    <div class="container">
+      <div class="row contact text-center">
+
+        <div class="col-5 p-2">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="bi bi-whatsapp mx-2"></i>
+              <span>{{ result?.home.contact.whatsapp }}</span>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-instagram mx-2"></i>
+              <span>{{ result?.home.contact.instagram }}</span>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-envelope-paper mx-2"></i>
+              <span>{{ result?.home.contact.email }}</span>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-envelope-paper mx-2"></i>
+              <span>{{ result?.home.contact.secondaryEmail }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-5 p-2">
+
+          <form action="https://formsubmit.co/dcordeiro962@gmail.com" method="POST" enctype="multipart/form-data">
+
+            <div class="row">
+              <div class="mb-3 col-6">
+                <label for="name" class="form-label">{{ result?.home.contact.form.name }}</label>
+                <input type="text" name="name" class="form-control" id="name">
+              </div>
+              <div class="mb-3 col-6">
+                <label for="email" class="form-label">{{ result?.home.contact.form.email }}</label>
+                <input type="email" name="email" class="form-control" id="email">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="mb-3">
+                <label for="message" class="form-label">{{ result?.home.contact.form.message }} <i class="bi bi-heart-fill"></i>: </label>
+                <textarea name="message" class="form-control" id="message" rows="2"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="formFileLg" class="form-label">{{ result?.home.contact.form.archive }}</label>
+                <input class="form-control form-control" id="formFileLg" type="file"  name="attachment" accept="image/png, image/jpeg">
+              </div>
+            </div>
+
+            <button class="btn btn-primary text-align-end" type="submit">{{ result?.home.contact.form.send }} <i class="bi bi-arrow-right mx-1"></i></button>
+
+            <input type="hidden" name="_subject" value="Portfolio! Sugestões">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://daniel-cordeiro.netlify.app/">
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
