@@ -18,20 +18,35 @@
         </div>
 
         <div class="col-5 p-2">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <div>
-            <label for="formFileLg" class="form-label">Large file input example</label>
-            <input class="form-control form-control-lg" id="formFileLg" type="file">
-          </div>
-        </div>
 
+          <form action="https://formsubmit.co/dcordeiro962@gmail.com" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name:</label>
+              <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail:</label>
+              <input type="email" name="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message:</label>
+              <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="formFileLg" class="form-label">Large file input example</label>
+              <input class="form-control form-control-lg" id="formFileLg" type="file"  name="attachment" accept="image/png, image/jpeg">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Enviar</button>
+
+            <input type="hidden" name="_subject" value="Portfolio! Sugestões">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://daniel-cordeiro.netlify.app/">
+          </form>
+
+        </div>
       </div>
     </div>
 
