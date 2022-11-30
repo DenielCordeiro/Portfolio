@@ -12,6 +12,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DesignsComponent } from './home/designs/designs.component';
+import { ProductComponent } from './home/product/product.component';
+import { ContactComponent } from './home/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ProjectsComponent,
     HeaderComponent,
+    DesignsComponent,
+    ProductComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

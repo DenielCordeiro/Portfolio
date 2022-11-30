@@ -6,29 +6,19 @@
   },
 
   "home": {
-    "tecnology": {
-      "title": "Tecnologias utilizadas",
-      "subtitle": "Desenvolvido com Angular v.14 | Bootstrap v.5",
-      "description": "Este Portfólio está em desenvolvimento, aqui alocara alguma mensagem sobre o mesmo",
-      "angular": {
-        "button": "Angular",
-        "about": "Angular é uma plataforma de aplicações web de código-fonte aberto e front-end baseado em TypeScript, liderado pela Equipe Angular do Google e por uma comunidade de indivíduos e corporações. Angular é uma reescrita completa do AngularJS, feito pela mesma equipe que o construiu."
-      },
-      "bootstrap": {
-        "button": "Bootstrap",
-        "about": "Bootstrap é um framework front-end gratuito para desenvolvimento web mais rápido e fácil. Bootstrap inclui modelos de design baseados em HTML e CSS para tipografia, formulários, botões, tabelas, navegação, modais, carrosséis de imagens e muitos outros, bem como plugins JavaScript opcionais. O Bootstrap também oferece a capacidade de criar facilmente designs responsivos."
-      },
-      "sass": {
-        "button": "Sass",
-        "about": "Sass é uma linguagem de extensão CSS de nível profissional é totalmente compatível com todas as versões de CSS. Levamos essa compatibilidade a sério, para que você possa usar perfeitamente todas as bibliotecas CSS disponíveis."
-      },
-      "javascript": {
-        "button": "JavaScript",
-        "about": "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web."
-      },
-      "typescript": {
-        "button": "TypeScript",
-        "about": "TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem."
+    "contact": {
+      "title": "Contato",
+      "subtitle": "Disponivel 24Horas",
+      "whatsapp": "Whatsapp: (11) 94441-1654",
+      "instagram": "https://www.instagram.com/deniel_leined/",
+      "email": "E-mail: dcordeiro962@gmail.com",
+      "secondaryEmail": "E-mail: daniel-mtz11@outlook.com",
+      "form": {
+        "name": "Seu nome:",
+        "email": "Seu e-mail",
+        "message": "Digite aqui suas dicas ou elogios",
+        "archive": "Envie print do que está pensando (alguma ideia):",
+        "send": "Enviar"
       }
     }
   },
