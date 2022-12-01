@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-product',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.sass']
 })
 export class ProductComponent implements OnInit {
+  urlToJson = 'assets/pt.json';
+  result: any;
 
-  constructor() { }
+  constructor( public http: HttpClient ) {
+    this.http.get<any>(this.urlToJson).subscribe(response => {
+      this.result = response;
+    });
+   }
 
   ngOnInit(): void {
   }
