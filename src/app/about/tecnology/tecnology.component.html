@@ -1,9 +1,6 @@
-<div class="">
-  <h2>{{ result?.home.tecnology.title }}</h2>
-  <h5>{{ result?.home.tecnology.subtitle }}</h5>
-  <p>
-    {{ result?.home.tecnology.description}}
-  </p>
+<div class="tecnologys">
+  <h3>{{ result?.about.tecnology.title }}</h3>
+  <h6>{{ result?.about.tecnology.subtitle }}</h6>
 </div>
 
 <hr class="my-4">
@@ -11,53 +8,53 @@
 <div>
   <p>
     <a class="btn btn-outline-dark mx-2 p-1 mb-3" data-bs-toggle="collapse" href="#buttonAngular" placement="left" ngbTooltip="Ver Sobre">
-      {{ result?.home.tecnology.angular.button }}
+      {{ result?.about.tecnology.angular.name }}
     </a>
 
     <a class="btn btn-secondary mx-2 p-1 mb-3" data-bs-toggle="collapse" href="#buttonBootstrap" placement="bottom" ngbTooltip="Ver Sobre">
-      {{ result?.home.tecnology.bootstrap.button }}
+      {{ result?.about.tecnology.bootstrap.name }}
     </a>
 
     <a class="btn btn-info mx-2 p-1 mb-3" data-bs-toggle="collapse" href="#buttonSass" placement="bottom" ngbTooltip="Ver Sobre">
-      {{ result?.home.tecnology.sass.button }}
+      {{ result?.about.tecnology.sass.name }}
     </a>
 
     <a class="btn btn-outline-warning mx-2 p-1 mb-3" data-bs-toggle="collapse" href="#buttonJavaScript" placement="bottom" ngbTooltip="Ver Sobre">
-      {{ result?.home.tecnology.javascript.button }}
+      {{ result?.about.tecnology.javascript.name }}
     </a>
 
     <a class="btn btn-outline-primary mx-2 p-1 mb-3" data-bs-toggle="collapse" href="#buttonTypeScript" placement="right" ngbTooltip="Ver Sobre">
-      {{ result?.home.tecnology.typescript.button }}
+      {{ result?.about.tecnology.typescript.name }}
     </a>
   </p>
 
   <div class="collapse" id="buttonAngular">
     <div class="card card-body p-2">
-      <span class="buttons-text">{{ result?.home.tecnology.angular.about }}</span>
+      <span class="buttons-text">{{ result?.about.tecnology.angular.description }}</span>
     </div>
   </div>
 
   <div class="collapse mt-2" id="buttonBootstrap">
     <div class="card card-body p-2">
-      <span class="buttons-text">{{ result?.home.tecnology.bootstrap.about }}</span>
+      <span class="buttons-text">{{ result?.about.tecnology.bootstrap.description }}</span>
     </div>
   </div>
 
   <div class="collapse mt-2" id="buttonSass">
     <div class="card card-body p-2">
-      <span class="buttons-text">{{ result?.home.tecnology.sass.about }}</span>
+      <span class="buttons-text">{{ result?.about.tecnology.sass.description }}</span>
     </div>
   </div>
 
   <div class="collapse mt-2" id="buttonJavaScript">
     <div class="card card-body p-2">
-      <span class="buttons-text">{{ result?.home.tecnology.javascript.about }}</span>
+      <span class="buttons-text">{{ result?.about.tecnology.javascript.description }}</span>
     </div>
   </div>
 
   <div class="collapse mt-2" id="buttonTypeScript">
     <div class="card card-body p-2">
-      <span class="buttons-text">{{ result?.home.tecnology.typescript.about }}</span>
+      <span class="buttons-text">{{ result?.about.tecnology.typescript.description }}</span>
     </div>
   </div>
 </div>
