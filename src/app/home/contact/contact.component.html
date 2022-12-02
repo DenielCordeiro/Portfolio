@@ -23,8 +23,9 @@
               <span>{{ result?.home.contact.email }}</span>
             </li>
             <li class="list-group-item">
-              <i class="bi bi-envelope-paper mx-2"></i>
-              <span>{{ result?.home.contact.secondaryEmail }}</span>
+              <i class="bi bi-linkedin mx-2"></i>
+              <span>{{ result?.home.contact.linkedin }}</span>
+              <a href="{{ linkedin }}" target="_blank">{{ linkedin }}</a>
             </li>
           </ul>
         </div>
@@ -68,23 +69,20 @@
       </div>
 
       <div class="contact-mobile">
-        <div class="col-12 p-2">
+        <div class="col-12 p-2 text-contact">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <i class="bi bi-whatsapp mx-2"></i>
-              <span>{{ result?.home.contact.whatsapp }}</span>
+              <span><i class="bi bi-whatsapp mx-2"></i> {{ result?.home.contact.whatsapp }}</span>
             </li>
             <li class="list-group-item">
-              <i class="bi bi-instagram mx-2"></i>
-              <span>{{ result?.home.contact.instagram }}</span>
+              <span><i class="bi bi-instagram mx-2"></i> {{ result?.home.contact.instagram }}</span>
             </li>
             <li class="list-group-item">
-              <i class="bi bi-envelope-paper mx-2"></i>
-              <span>{{ result?.home.contact.email }}</span>
+              <span><i class="bi bi-envelope-paper mx-2"></i> {{ result?.home.contact.email }}</span>
             </li>
             <li class="list-group-item">
-              <i class="bi bi-envelope-paper mx-2"></i>
-              <span>{{ result?.home.contact.secondaryEmail }}</span>
+              <span><i class="bi bi-linkedin"></i> {{ result?.home.contact.linkedin }}</span>
+              <a href="{{ linkedin }}" target="_blank">{{ linkedin }}</a>
             </li>
           </ul>
         </div>
