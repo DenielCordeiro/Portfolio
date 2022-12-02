@@ -1,15 +1,36 @@
+@use '../../../assets/sass/mixins-small'
+@use '../../../assets/sass/mixins-medium'
+
 a
   text-decoration: none
 
 .card
-  width: 45vw
-  margin-top: 4vh
+  margin: 5vh 0px 3.5vh 0px
+  width: 35vw
 
   img
     margin: -4vh 0px 0px 1vw
-    max-width: 43vw
+    max-width: 33vw
     max-height: 38vh
     border-radius: 6px
 
 .modal
   text-decoration: none
+
+@include mixins-small.display
+  .card
+    margin-top: 2vh
+    width: 100%
+
+    img
+      margin-left: 2vw
+      max-width: 95.5%
+
+@include mixins-medium.display
+  .card
+    margin-top: 2vh
+    width: 100%
+
+    img
+      margin-left: 2vw
+      max-width: 95.5%
