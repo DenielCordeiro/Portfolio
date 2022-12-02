@@ -6,19 +6,30 @@
   },
 
   "home": {
+    "designs": {
+      "title": "Crie um visual novo para sua página",
+      "subtitle": "- Usar com facilidade"
+    },
+    "product": {
+      "title": "Que tal criarmos algo do zero",
+      "subtitle": "Faça seu Site, Blog ou App"
+    },
     "contact": {
       "title": "Contato",
       "subtitle": "Disponivel 24Horas",
       "whatsapp": "Whatsapp: (11) 94441-1654",
       "instagram": "https://www.instagram.com/deniel_leined/",
       "email": "E-mail: dcordeiro962@gmail.com",
-      "secondaryEmail": "E-mail: daniel-mtz11@outlook.com",
+      "linkedin": "Linkedin: ",
       "form": {
         "name": "Seu nome:",
         "email": "Seu e-mail",
         "message": "Digite aqui suas dicas ou elogios",
         "archive": "Envie print do que está pensando (alguma ideia):",
-        "send": "Enviar"
+        "send": "Enviar dica ou elogio"
+      },
+      "contactModal": {
+        "hint": "Envie-me uma dica!"
       }
     }
   },
