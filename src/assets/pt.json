@@ -86,6 +86,30 @@
       "line3": "Followize - Estágio em Desenvolvimento Web (2020-2021)",
       "line4": "Desenvolvedor Front-end Junior I (2021-2022)"
     },
+    "tecnology": {
+      "title": "Tecnologias Utilizadas",
+      "subtitle": "Portfolio construido com totas tecnologias em sua última versão lançada",
+      "angular": {
+        "name": "Angular",
+        "description": "Angular é uma plataforma de aplicações web de código-fonte aberto e front-end baseado em TypeScript liderado pela Equipe Angular do Google e por uma comunidade de indivíduos e corporações. Angular é uma reescrita completa do AngularJS, feito pela mesma equipe que o construiu."
+      },
+      "bootstrap": {
+        "name": "Bootstrap",
+        "description": "Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo"
+      },
+      "sass": {
+        "name": "SASS",
+        "description": "Sass é uma linguagem de folhas de estilo concebida inicialmente por Hampton Catlin e desenvolvida por Natalie Weizenbaum. Depois de suas versões iniciais, Weizenbaum e Chris Eppstein continuaram a estender Sass com SassScript, uma simples linguagem de script usada em arquivos Sass."
+      },
+      "javascript": {
+        "name": "JavaScript",
+        "description": "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web."
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "description": "TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem."
+      }
+    },
     "linkedin": "LINKEDIN",
     "github": "GITHUB",
     "instagram": "INSTAGRAM"
