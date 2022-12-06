@@ -1,0 +1,23 @@
+<div class="button-open">
+  <i class="bi bi-arrow-right-circle-fill open" (click)="openMenu()"></i>
+</div>
+
+<div class="sidebar" style="display:none" id="leftMenu">
+  <div class="row item">
+    <a [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="closeMenu()">
+      <i class="bi bi-house-heart-fill"></i>
+    </a>
+  </div>
+
+  <div class="row item">
+    <a [routerLink]="['/projects']" routerLinkActive="router-link-active" (click)="closeMenu()">
+      <i class="bi bi-layers-fill"></i>
+    </a>
+  </div>
+
+  <div class="row item">
+    <a [routerLink]="['/about']" class="tt" routerLinkActive="router-link-active" (click)="closeMenu()">
+      <i class="bi bi-person-lines-fill"></i>
+    </a>
+  </div>
+</div>
