@@ -1,9 +1,7 @@
-<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   {{ result?.home.contact.contactModal.hint }}
 </button>
 
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -11,23 +9,23 @@
         <h5 class="modal-title" id="exampleModalLabel">{{ result?.home.contact.title }}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="https://formsubmit.co/dcordeiro962@gmail.com" method="POST" enctype="multipart/form-data">
+      <form action="https://formsubmit.co/dcordeiro962@gmail.com" method="POST" enctype="multipart/form-data" [formGroup]="form">
         <div class="modal-body">
           <div class="row">
             <div class="mb-3 col-6">
               <label for="name" class="form-label">{{ result?.home.contact.form.name }}</label>
-              <input type="text" name="name" class="form-control" id="name">
+              <input type="text" name="name" class="form-control" id="name" formControlName="name">
             </div>
             <div class="mb-3 col-6">
               <label for="email" class="form-label">{{ result?.home.contact.form.email }}</label>
-              <input type="email" name="email" class="form-control" id="email">
+              <input type="email" name="email" class="form-control" id="email" formControlName="email">
             </div>
           </div>
 
           <div class="row">
             <div class="mb-3">
               <label for="message" class="form-label">{{ result?.home.contact.form.message }} <i class="bi bi-heart-fill"></i>: </label>
-              <textarea name="message" class="form-control" id="message" rows="2"></textarea>
+              <textarea name="message" class="form-control" id="message" rows="2" formControlName="message"></textarea>
             </div>
 
             <div class="mb-3">
@@ -43,7 +41,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button class="btn btn-primary text-align-end" type="submit">{{ result?.home.contact.form.send }} <i class="bi bi-arrow-right mx-1"></i></button>
+          <button class="btn btn-primary text-align-end" type="submit" [disabled]="form.invalid">{{ result?.home.contact.form.send }} <i class="bi bi-arrow-right mx-1"></i></button>
         </div>
       </form>
     </div>
