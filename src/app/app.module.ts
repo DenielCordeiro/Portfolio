@@ -17,6 +17,7 @@ import { DesignsComponent } from './home/designs/designs.component';
 import { ProductComponent } from './home/product/product.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { ContactModalComponent } from './home/contact/contact-modal/contact-modal.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ContactModalComponent } from './home/contact/contact-modal/contact-moda
     ProductComponent,
     ContactComponent,
     ContactModalComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
