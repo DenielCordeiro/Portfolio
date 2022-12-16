@@ -1,8 +1,14 @@
+This project is public, but 🥺 please don't change the main.
+
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server
+
+To install the projector you just need to type "yarn starn" in your terminal.
+
+For more information see: https://yarnpkg.com/
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
