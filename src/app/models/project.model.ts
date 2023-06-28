@@ -6,6 +6,6 @@ export class ProjectModel {
     public subtitle?: string,
     public description?: string,
     public image?: string,
-    public github?: string
+    public github?: string,
   ) {}
 }

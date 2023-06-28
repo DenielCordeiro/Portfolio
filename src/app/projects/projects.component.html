@@ -9,7 +9,7 @@
   <div class="container contents">
     <div class="row">
       <div class="project" *ngFor="let project of projects">
-        <a href="#" data-bs-toggle="modal" data-bs-target="#electricalSuplyStoreModal" >
+        <a (click)="openModal(project)">
           <div class="card p-4">
             <div class="row text-secundary">
               <div class="col summary mx-2">
@@ -31,31 +31,13 @@
           </div>
         </a>
 
-        <div class="modal fade" id="electricalSuplyStoreModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{ project.name }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
+        <dialog id="productModal">
+          <div class="projectSelectd" *ngFor="let item of this?.projectSelected">
+            <h2>{{ item?.name }}</h2>
 
-              <div class="modal-body">
-                <img class="img-modal" src="{{ project.image }}" alt="">
-
-
-                <div class="about-project container">
-                  <span>{{ project.description }}</span>
-                </div>
-              </div>
-
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ result?.projects.close }}</button>
-                <a href="{{ project.github }}" type="button" class="btn btn-dark" target="_blank">{{ result?.projects.github }}</a>
-                <button type="button" class="btn btn-primary">{{ result?.projects.seeProject }}</button>
-              </div>
-            </div>
+            <button (click)="closeModal()">fechar</button>
           </div>
-        </div>
+        </dialog>
 
         <hr class="my-3 mx-4">
       </div>

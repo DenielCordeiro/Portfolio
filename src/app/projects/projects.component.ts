@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import  projectsData  from '../data/data-projects/projects'
 import { ProjectModel } from '../models/project.model';
 
@@ -12,25 +10,39 @@ import { ProjectModel } from '../models/project.model';
 export class ProjectsComponent implements OnInit {
   urlToJson = 'assets/pt.json';
   result: any;
-
   projects: ProjectModel[] = projectsData;
+  projectSelected: ProjectModel[] = [];
+  modalOpen: boolean = false;
 
-  constructor(
-    public http: HttpClient,
-    public config: NgbCarouselConfig
-    ) {
-    this.http.get<any>(this.urlToJson).subscribe(response => {
-      this.result = response;
-    });
+  constructor() {}
 
-    config.interval = 7000;
-		config.wrap = false;
-		config.keyboard = false;
-		config.pauseOnHover = false;
+  ngOnInit(): void {}
+
+  openModal(project: Object) {
+    const modal: HTMLDialogElement | null = document.querySelector('#productModal');
+    if(this.modalOpen === true) {
+      this.projectSelected = [];
+    }
+
+    if (modal !== null) {
+      this.projectSelected?.push(project);
+      modal.showModal();
+      this.modalOpen = true;
+    } else {
+      alert("[error]: modal está vindo nulo");
+    }
   }
 
-  ngOnInit(): void {
-    console.log(this.projects);
-  }
+  closeModal() {
+    const modal: HTMLDialogElement | null = document.querySelector('#productModal');
 
+    if (modal !== null) {
+      this.modalOpen
+      this.projectSelected = [];
+      this.modalOpen = false;
+      modal.close();
+    } else {
+      alert("[error]: modal está vindo nulo");
+    }
+  }
 }
