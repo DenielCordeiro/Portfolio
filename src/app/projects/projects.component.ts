@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import  projectsData  from '../data/data-projects/projects'
+import { ProjectModel } from '../models/project.model';
 
 @Component({
   selector: 'app-projects',
@@ -8,11 +10,10 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./projects.component.sass']
 })
 export class ProjectsComponent implements OnInit {
-  electricalSuplyStoreGit: string = 'https://github.com/DenielCordeiro/Eletrical-supply-store';
-  homePageInstagramGit: string = 'https://github.com/DenielCordeiro/home-page-Instagram';
-  moviesGit: string = 'https://github.com/DenielCordeiro/videosApp'
   urlToJson = 'assets/pt.json';
   result: any;
+
+  projects: ProjectModel[] = projectsData;
 
   constructor(
     public http: HttpClient,
@@ -29,6 +30,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.projects);
   }
 
 }

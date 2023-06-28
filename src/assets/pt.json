@@ -60,7 +60,7 @@
     },
     "movie": {
       "title": "API de Filmes",
-      "tecnology": "Angular 9 or + and Ionic 5 or +",
+      "tecnology": "",
       "subtitle": "Projeto voltado a usar o Framework Ionic.",
       "date": "",
       "description": ""
