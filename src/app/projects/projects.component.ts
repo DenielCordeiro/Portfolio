@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import  projectsData  from '../data/data-projects/projects'
 import { ProjectModel } from '../models/project.model';
 
@@ -14,7 +15,11 @@ export class ProjectsComponent implements OnInit {
   projectSelected: ProjectModel[] = [];
   modalOpen: boolean = false;
 
-  constructor() {}
+  constructor(public http: HttpClient) {
+    this.http.get<any>(this.urlToJson).subscribe(response => {
+      this.result = response;
+    });
+  }
 
   ngOnInit(): void {}
 
@@ -28,6 +33,9 @@ export class ProjectsComponent implements OnInit {
       this.projectSelected?.push(project);
       modal.showModal();
       this.modalOpen = true;
+
+      console.log(this.projectSelected);
+
     } else {
       alert("[error]: modal está vindo nulo");
     }

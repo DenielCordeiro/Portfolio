@@ -36,35 +36,6 @@
 
   "projects": {
     "title": "Meus Projetos",
-    "electricalSuplyStore": {
-      "title": "Loja de Materias Elétricos",
-      "subtitle": "Projeto voltado a usar edições com SASS.",
-      "date": "",
-      "description": {
-        "line": "Criado acompanhado o curso de 'SASS' na plataforma da Udemy, com o professor Matheus Battisti. ",
-        "line2": "Este projeto traz boas praticas do SASS e uma reponsividade para dispositivos Mobile."
-      },
-      "extra": "test"
-    },
-    "homePageInstagram": {
-      "title": "Página Inicial do Instagram",
-      "subtitle": "Projeto voltado a usar edições com SASS.",
-      "date": "",
-      "description": {
-        "line": "Esse foi meu primeiro projeto pessoal usando SASS. ",
-        "line2": "Desenvolver a cópia da tela inicial do Instagram com a tecnologia foi um desafio. ",
-        "line3": "Passei por dificuldes em entender como se utiliza os mixins e os plugins, ainda tenho que praticar muito os mesmos. ",
-        "line4": "As vantagens de se utilizar Sass são facinantes, agilizar a criação de seu código e deixa-lo bem organizado reduzindo até mesmo á repetição de códigos."
-      },
-      "extra": "test"
-    },
-    "movie": {
-      "title": "API de Filmes",
-      "tecnology": "",
-      "subtitle": "Projeto voltado a usar o Framework Ionic.",
-      "date": "",
-      "description": ""
-    },
     "github": "GitHub",
     "seeProject": "Ver Projeto",
     "close": "Fechar"

@@ -22,25 +22,59 @@
                 <h6>{{ project.subtitle }}</h6>
 
                 <div class="images">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                  <span class="mx-2">-</span>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                  <span class="mx-2" *ngIf="project.Typescript == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/> -</span>
+                  <span class="mx-2" *ngIf="project.Javascript == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> -</span>
+                  <span class="mx-2" *ngIf="project.html == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> -</span>
+                  <span class="mx-2" *ngIf="project.sass == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/></span>
                 </div>
               </div>
             </div>
           </div>
         </a>
 
-        <dialog id="productModal">
-          <div class="projectSelectd" *ngFor="let item of this?.projectSelected">
-            <h2>{{ item?.name }}</h2>
-
-            <button (click)="closeModal()">fechar</button>
-          </div>
-        </dialog>
-
         <hr class="my-3 mx-4">
       </div>
     </div>
   </div>
+
+  <dialog id="productModal">
+    <div class="projectSelected" *ngFor="let project of this.projectSelected">
+      <div class="row">
+        <div class="col-6">
+          <h2>{{ project.name }}</h2>
+        </div>
+
+        <div class="col-6 close-modal">
+          <span (click)="closeModal()">X</span>
+        </div>
+      </div>
+
+      <hr class="my-2">
+
+      <div class="row">
+        <img src="{{ project.image }}" alt="{{ project.name }}" class="img-modal">
+      </div>
+
+      <hr class="mt-2 mb-3">
+
+      <div class="row">
+        <div class="col-4">
+          <button routerLink="/projects/{{ project.page }}" class="btn btn-primary" *ngIf="project.page !== ''">{{ result?.projects.seeProject }}</button>
+
+          <a class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado" *ngIf="project.page === ''">
+            <i class="bi bi-info-circle-fill"></i>
+          </a>
+          <button class="btn btn-primary" *ngIf="project.page === ''" [disabled]="project.page == ''">{{ result?.projects.seeProject }}</button>
+        </div>
+
+        <div class="col-4">
+          <a href="{{ project.github }}" target="_blank" class="btn btn-dark">{{ result?.projects.github }}</a>
+        </div>
+
+        <div class="col-4">
+          <button (click)="closeModal()" class="btn btn-secondary">{{ result?.projects.close }}</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
 </section>

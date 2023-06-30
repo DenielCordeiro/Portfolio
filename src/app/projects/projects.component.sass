@@ -44,20 +44,31 @@
       summary
         display: flex
 
-  .modal-body
+
+.projectSelected
+  height: 83vh
+  width: 67vw
+
+  h2
     text-align: justify
 
-    .img-modal
-      height: 72vh
-      width: 100%
-      border: 1px solid variables.$white
-      border-radius: 2%
+  .close-modal
+    text-align: end
+    font-size: 25px
+    color: variables.$black
 
-      @include mixins-small.display
-        display: none
+    &:hover
+      color: variables.$warn
 
-    .about-project
-      display: none
+  a
+    text-decoration: none
 
-      @include mixins-small.display
-        display: inline
+  .img-modal
+    height: 70vh
+    width: 100%
+    border: 1px solid variables.$white
+    border-radius: 2%
+
+  .information
+    font-size: 25px
+    color: variables.$warn
