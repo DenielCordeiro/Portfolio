@@ -4,51 +4,52 @@
 
 <section id="body">
   <div class="base">
-      <div class="contents">
-          <div class="content-screen"></div>
+    <div class="contents">
+      <!-- <div class="content-screen">{{ this.valorInScreen }}</div> -->
+      <div class="content-screen"></div>
 
-          <div class="base-calculator">
-              <div class="content-numbers">
-                  <div class="numbers">
-                      <a href="#" onclick="numberSelected('1')"><div>1</div></a>
-                      <a href="#" onclick="numberSelected('2')"><div>2</div></a>
-                      <a href="#" onclick="numberSelected('3')"><div>3</div></a>
-                  </div>
-
-                  <div class="numbers">
-                      <a href="#" onclick="numberSelected('4')"><div>4</div></a>
-                      <a href="#" onclick="numberSelected('5')"><div>5</div></a>
-                      <a href="#" onclick="numberSelected('6')"><div>6</div></a>
-                  </div>
-
-                  <div class="numbers">
-                      <a href="#" onclick="numberSelected('7')"><div>7</div></a>
-                      <a href="#" onclick="numberSelected('8')"><div>8</div></a>
-                      <a href="#" onclick="numberSelected('9')"><div>9</div></a>
-                  </div>
-
-                  <div class="numbers">
-                      <a href="#" onclick="numberSelected('0')"><div class="zero">0</div></a>
-                      <a href="#" onclick="numberSelected('.')"><div>.</div></a>
-                  </div>
-              </div>
-
-              <div class="content-buttons">
-                  <a href="#" onclick="toCleanScreenContent()">
-                      <div class="clear">Clear</div>
-                  </a>
-                  <a href="#" onclick="result()">
-                      <div class="enter">Enter</div>
-                  </a>
-              </div>
+      <div class="base-calculator">
+        <div class="content-numbers">
+          <div class="numbers">
+            <a (click)="numberSelected('1')"><div>1</div></a>
+            <a (click)="numberSelected('2')"><div>2</div></a>
+            <a (click)="numberSelected('3')"><div>3</div></a>
           </div>
-      </div>
 
-      <div class="operations">
-          <a href="#" onclick="operations('-')"><div class="subtraction">-</div></a>
-          <a href="#" onclick="operations('+')"><div class="sum">+</div></a>
-          <a href="#" onclick="operations('*')"><div class="multiplication">x</div></a>
-          <a href="#" onclick="operations('/')"><div class="division">&#247;</div></a>
+          <div class="numbers">
+            <a (click)="numberSelected('4')"><div>4</div></a>
+            <a (click)="numberSelected('5')"><div>5</div></a>
+            <a (click)="numberSelected('6')"><div>6</div></a>
+          </div>
+
+          <div class="numbers">
+            <a (click)="numberSelected('7')"><div>7</div></a>
+            <a (click)="numberSelected('8')"><div>8</div></a>
+            <a (click)="numberSelected('9')"><div>9</div></a>
+          </div>
+
+          <div class="numbers">
+            <a (click)="numberSelected('0')"><div class="zero">0</div></a>
+            <a (click)="numberSelected('.')"><div>.</div></a>
+          </div>
+        </div>
+
+        <div class="content-buttons">
+          <a (click)="toCleanScreenContent()">
+            <div class="clear">Clear</div>
+          </a>
+          <a (click)="result()">
+            <div class="enter">Enter</div>
+          </a>
+        </div>
       </div>
+    </div>
+
+    <div class="operations">
+      <a onclick="operations('-')"><div class="subtraction">-</div></a>
+      <a onclick="operations('+')"><div class="sum">+</div></a>
+      <a onclick="operations('*')"><div class="multiplication">x</div></a>
+      <a onclick="operations('/')"><div class="division">&#247;</div></a>
+    </div>
   </div>
 </section>

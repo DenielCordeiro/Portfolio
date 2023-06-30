@@ -85,35 +85,35 @@ export class CalculatorComponent implements OnInit {
   }
 }
 
-class Inputs {
+export class Inputs {
   input1: number = 0;
   input2: number = 0;
 }
-const valors = new Inputs();
+export const valors = new Inputs();
 
 class Calculator {
   Sum(valors: Inputs): number {
-      const resultSum = valors.input1 + valors.input2;
+    const resultSum = valors.input1 + valors.input2;
 
-      return parseFloat(resultSum.toFixed(2));
+    return parseFloat(resultSum.toFixed(2));
   }
 
   Subtraction(valors: Inputs): number {
-      const resultSubtraction = valors.input1 - valors.input2;
+    const resultSubtraction = valors.input1 - valors.input2;
 
-      return parseFloat(resultSubtraction.toFixed(2));
+    return parseFloat(resultSubtraction.toFixed(2));
   }
 
   Multiplication(valors: Inputs): number {
-      const resultMultiplication = valors.input1 * valors.input2;
+    const resultMultiplication = valors.input1 * valors.input2;
 
-      return parseFloat(resultMultiplication.toFixed(2));
+    return parseFloat(resultMultiplication.toFixed(2));
   }
 
   Division(valors: Inputs): number {
-      const resultDivision = valors.input1 / valors.input2;
+    const resultDivision = valors.input1 / valors.input2;
 
-      return parseFloat(resultDivision.toFixed(2));
+    return parseFloat(resultDivision.toFixed(2));
   }
 }
 const calculator = new Calculator();
