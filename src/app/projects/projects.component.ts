@@ -33,9 +33,6 @@ export class ProjectsComponent implements OnInit {
       this.projectSelected?.push(project);
       modal.showModal();
       this.modalOpen = true;
-
-      console.log(this.projectSelected);
-
     } else {
       alert("[error]: modal está vindo nulo");
     }

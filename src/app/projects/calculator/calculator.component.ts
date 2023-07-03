@@ -20,9 +20,9 @@ export class CalculatorComponent implements OnInit {
     this.valorRemovedFromArray = this.arrayValors.join("");
 
     if (valors.input1 == 0) {
-      this.valorInScreen.innerHTML = this.valorRemovedFromArray
+      this.valorInScreen = this.valorRemovedFromArray
     } else {
-      this.valorInScreen.innerHTML = valors.input1 + '   ' + this.sinal + '   ' + this.valorRemovedFromArray;
+      this.valorInScreen = valors.input1 + '   ' + this.sinal + '   ' + this.valorRemovedFromArray;
     }
   }
 
@@ -34,7 +34,7 @@ export class CalculatorComponent implements OnInit {
     }
 
     this.sinal = sinalSelected;
-    this.valorInScreen.innerHTML = valors.input1 + '  ' + this.sinal;
+    this.valorInScreen = valors.input1 + '  ' + this.sinal;
     this.valuesReset();
   }
 
@@ -44,16 +44,16 @@ export class CalculatorComponent implements OnInit {
     }
 
     if (this.sinal === '+') {
-      this.valorInScreen.innerHTML = calculator.Sum(valors);
+      this.valorInScreen = calculator.Sum(valors);
       valors.input1 = calculator.Sum(valors);
     } else if (this.sinal === '-') {
-      this.valorInScreen.innerHTML = calculator.Subtraction(valors);
+      this.valorInScreen = calculator.Subtraction(valors);
       valors.input1 = calculator.Subtraction(valors);
     } else if (this.sinal === '*') {
-      this.valorInScreen.innerHTML = calculator.Multiplication(valors);
+      this.valorInScreen = calculator.Multiplication(valors);
       valors.input1 = calculator.Multiplication(valors);
     } else if (this.sinal === '/') {
-      this.valorInScreen.innerHTML = calculator.Division(valors);
+      this.valorInScreen = calculator.Division(valors);
       valors.input1 = calculator.Division(valors);
     } else {
       alert("[ERROR !]: no operation signal has been entered");
@@ -80,7 +80,7 @@ export class CalculatorComponent implements OnInit {
 
     this.resetInputsAndSinal();
     this.valuesReset();
-    this.valorInScreen.innerHTML = '';
+    this.valorInScreen = '';
     this.valorRemovedFromArray = '';
   }
 }

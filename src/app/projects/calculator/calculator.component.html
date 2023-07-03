@@ -5,8 +5,7 @@
 <section id="body">
   <div class="base">
     <div class="contents">
-      <!-- <div class="content-screen">{{ this.valorInScreen }}</div> -->
-      <div class="content-screen"></div>
+      <div class="content-screen">{{ this.valorInScreen }}</div>
 
       <div class="base-calculator">
         <div class="content-numbers">
@@ -46,10 +45,15 @@
     </div>
 
     <div class="operations">
-      <a onclick="operations('-')"><div class="subtraction">-</div></a>
-      <a onclick="operations('+')"><div class="sum">+</div></a>
-      <a onclick="operations('*')"><div class="multiplication">x</div></a>
-      <a onclick="operations('/')"><div class="division">&#247;</div></a>
+      <a (click)="operations('-')"><div class="subtraction">-</div></a>
+      <a (click)="operations('+')"><div class="sum">+</div></a>
+      <a (click)="operations('*')"><div class="multiplication">x</div></a>
+      <a (click)="operations('/')"><div class="division">&#247;</div></a>
     </div>
   </div>
 </section>
+
+<section id="return-projects">
+  <app-icon-return></app-icon-return>
+</section>
+
