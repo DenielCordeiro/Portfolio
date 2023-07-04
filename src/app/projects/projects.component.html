@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  <dialog id="productModal">
+  <dialog id="projectModal">
     <div class="projectSelected" *ngFor="let project of this.projectSelected">
       <div class="row">
         <div class="col-6">
@@ -53,12 +53,13 @@
 
       <div class="row">
         <img src="{{ project.image }}" alt="{{ project.name }}" class="img-modal">
+        <p class="description-modal">{{ project.description }}</p>
       </div>
 
       <hr class="mt-2 mb-3">
 
-      <div class="row">
-        <div class="col-4">
+      <div class="row buttons-modal">
+        <div class="col-4 see-project">
           <button routerLink="/projects/{{ project.page }}" class="btn btn-primary" *ngIf="project.page !== ''">{{ result?.projects.seeProject }}</button>
 
           <a class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado" *ngIf="project.page === ''">
@@ -76,5 +77,10 @@
         </div>
       </div>
     </div>
+  </dialog>
+
+  <dialog id="productModalMobile">
+    .
+
   </dialog>
 </section>

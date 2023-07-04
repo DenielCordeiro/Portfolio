@@ -24,7 +24,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {}
 
   openModal(project: Object) {
-    const modal: HTMLDialogElement | null = document.querySelector('#productModal');
+    const modal: HTMLDialogElement | null = document.querySelector('#projectModal');
     if(this.modalOpen === true) {
       this.projectSelected = [];
     }
@@ -39,7 +39,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   closeModal() {
-    const modal: HTMLDialogElement | null = document.querySelector('#productModal');
+    const modal: HTMLDialogElement | null = document.querySelector('#projectModal');
 
     if (modal !== null) {
       this.modalOpen

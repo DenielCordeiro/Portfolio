@@ -46,8 +46,11 @@
 
 
 .projectSelected
-  height: 83vh
+  height: 100%
   width: 67vw
+
+  @include mixins-small.display
+    width: 80vw
 
   h2
     text-align: justify
@@ -69,6 +72,25 @@
     border: 1px solid variables.$white
     border-radius: 2%
 
-  .information
-    font-size: 25px
-    color: variables.$warn
+    @include mixins-small.display
+      display: none
+
+  .description-modal
+    display: none
+
+    @include mixins-small.display
+      display: inline
+
+  .buttons-modal
+    @include mixins-small.display
+      justify-content: end
+
+  .see-project
+    .information
+      font-size: 25px
+      color: variables.$warn
+
+    @include mixins-small.display
+      display: none
+
+
