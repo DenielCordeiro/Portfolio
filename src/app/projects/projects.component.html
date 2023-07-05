@@ -8,174 +8,79 @@
 <section id="projects-cards">
   <div class="container contents">
     <div class="row">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#electricalSuplyStoreModal">
-        <div class="card p-4">
-          <div class="row text-secundary">
-            <div class="col summary mx-2">
-              <summary>
-                <span>{{ result?.projects.electricalSuplyStore.description.line }}</span>
-                <span>{{ result?.projects.electricalSuplyStore.description.line2 }}</span>
-              </summary>
-            </div>
-            <div class="col text-center">
-              <h2>{{ result?.projects.electricalSuplyStore.title }}</h2>
-              <h6>{{ result?.projects.electricalSuplyStore.subtitle }}</h6>
+      <div class="project" *ngFor="let project of projects">
+        <a (click)="openModal(project)">
+          <div class="card p-4">
+            <div class="row text-secundary">
+              <div class="col summary mx-2">
+                <summary>
+                  <span>{{ project.description }}</span>
+                </summary>
+              </div>
+              <div class="col text-center">
+                <h2>{{ project.name }}</h2>
+                <h6>{{ project.subtitle }}</h6>
 
-              <div class="images">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                <span class="mx-2">-</span>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                <div class="images">
+                  <span class="mx-2" *ngIf="project.Typescript == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/> -</span>
+                  <span class="mx-2" *ngIf="project.Javascript == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> -</span>
+                  <span class="mx-2" *ngIf="project.html == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> -</span>
+                  <span class="mx-2" *ngIf="project.sass == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <div class="modal fade" id="electricalSuplyStoreModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">{{ result?.projects.electricalSuplyStore.title }}</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-              <ngb-carousel>
-                <ng-template ngbSlide>
-                  <div class="picsum-img-wrapper">
-                    <img class="img-modal" src="../../assets/img/eletrical-suply-store/1.png" alt="Random first slide" />
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <div class="picsum-img-wrapper">
-                    <img class="img-modal" src="../../assets/img/eletrical-suply-store/2.png" alt="Random second slide" />
-                  </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                  <div class="picsum-img-wrapper">
-                    <img class="img-modal" src="../../assets/img/eletrical-suply-store/3.png" alt="Random third slide" />
-                  </div>
-                </ng-template>
-              </ngb-carousel>
-
-              <div class="about-project container">
-                <span>{{ result?.projects.electricalSuplyStore.description.line }}</span>
-                <span>{{ result?.projects.electricalSuplyStore.description.line2 }}</span>
-              </div>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ result?.projects.close }}</button>
-              <a href="{{ electricalSuplyStoreGit }}" type="button" class="btn btn-dark" target="_blank">{{ result?.projects.github }}</a>
-              <!-- <button type="button" class="btn btn-primary">{{ result?.projects.seeProject }}</button> -->
-            </div>
-          </div>
-        </div>
+        <hr class="my-3 mx-4">
       </div>
-
-      <hr class="my-3 mx-4">
-
-      <a href="#" data-bs-toggle="modal" data-bs-target="#homePageInstagramModal">
-        <div class="card p-4">
-          <div class="row">
-            <div class="col summary mx-2">
-              <summary>
-                <span>{{ result?.projects.homePageInstagram.description.line }}</span>
-                <span>{{ result?.projects.homePageInstagram.description.line2 }}</span>
-                <span>{{ result?.projects.homePageInstagram.description.line3 }}</span>
-                <span>{{ result?.projects.homePageInstagram.description.line4 }}</span>
-              </summary>
-            </div>
-            <div class="col text-center">
-              <h2>{{ result?.projects.homePageInstagram.title }}</h2>
-              <h6>{{ result?.projects.homePageInstagram.subtitle }}</h6>
-
-              <div class="images">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                <span class="mx-2">-</span>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <div class="modal fade" id="homePageInstagramModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">{{ result?.projects.homePageInstagram.title }}</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-              <img class="img-modal" src="../../assets/img/home-page-instagram/home.png" alt="">
-
-              <div class="about-project container">
-                <span>{{ result?.projects.homePageInstagram.description.line }}</span>
-                <span>{{ result?.projects.homePageInstagram.description.line2 }}</span>
-                <span>{{ result?.projects.homePageInstagram.description.line3 }}</span>
-                <span>{{ result?.projects.homePageInstagram.description.line4 }}</span>
-              </div>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ result?.projects.close }}</button>
-              <a href="{{ homePageInstagramGit }}" type="button" class="btn btn-dark" target="_blank">{{ result?.projects.github }}</a>
-              <!-- <button type="button" class="btn btn-primary">{{ result?.projects.seeProject }}</button> -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- <hr class="my-3">
-
-      <a href="#" data-bs-toggle="modal" data-bs-target="#moviesModal">
-        <div class="card p-4">
-          <div class="row">
-            <div class="col summary mx-2">
-              <summary>
-                <span></span>
-
-                <h6 class="text-end pt-3">{{ result?.projects.movie.extra}}</h6>
-              </summary>
-            </div>
-            <div class="col text-center">
-              <h2>{{ result?.projects.movie.title }}</h2>
-              <h6>{{ result?.projects.movie.subtitle }}</h6>
-
-              <div class="images">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                <span class="mx-2">-</span>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-                <span class="mx-2">-</span>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <div class="modal fade" id="moviesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ result?.projects.close }}</button>
-              <a href="{{ moviesGit }}" type="button" class="btn btn-dark" target="_blank">{{ result?.projects.github }}</a>
-              <button type="button" class="btn btn-primary">{{ result?.projects.seeProject }}</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
     </div>
   </div>
+
+  <dialog id="projectModal">
+    <div class="projectSelected" *ngFor="let project of this.projectSelected">
+      <div class="row">
+        <div class="col-6">
+          <h2>{{ project.name }}</h2>
+        </div>
+
+        <div class="col-6 close-modal">
+          <span (click)="closeModal()">X</span>
+        </div>
+      </div>
+
+      <hr class="my-2">
+
+      <div class="row">
+        <img src="{{ project.image }}" alt="{{ project.name }}" class="img-modal">
+        <p class="description-modal">{{ project.description }}</p>
+      </div>
+
+      <hr class="mt-2 mb-3">
+
+      <div class="row buttons-modal">
+        <div class="col-4 see-project">
+          <button routerLink="/projects/{{ project.page }}" class="btn btn-primary" *ngIf="project.page !== ''">{{ result?.projects.seeProject }}</button>
+
+          <a class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado" *ngIf="project.page === ''">
+            <i class="bi bi-info-circle-fill"></i>
+          </a>
+          <button class="btn btn-primary" *ngIf="project.page === ''" [disabled]="project.page == ''">{{ result?.projects.seeProject }}</button>
+        </div>
+
+        <div class="col-4">
+          <a href="{{ project.github }}" target="_blank" class="btn btn-dark">{{ result?.projects.github }}</a>
+        </div>
+
+        <div class="col-4">
+          <button (click)="closeModal()" class="btn btn-secondary">{{ result?.projects.close }}</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="productModalMobile">
+    .
+
+  </dialog>
 </section>

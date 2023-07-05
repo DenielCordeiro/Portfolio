@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import  projectsData  from '../data/data-projects/projects'
+import { ProjectModel } from '../models/project.model';
 
 @Component({
   selector: 'app-projects',
@@ -8,27 +9,45 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./projects.component.sass']
 })
 export class ProjectsComponent implements OnInit {
-  electricalSuplyStoreGit: string = 'https://github.com/DenielCordeiro/Eletrical-supply-store';
-  homePageInstagramGit: string = 'https://github.com/DenielCordeiro/home-page-Instagram';
-  moviesGit: string = 'https://github.com/DenielCordeiro/videosApp'
   urlToJson = 'assets/pt.json';
   result: any;
+  projects: ProjectModel[] = projectsData;
+  projectSelected: ProjectModel[] = [];
+  modalOpen: boolean = false;
 
-  constructor(
-    public http: HttpClient,
-    public config: NgbCarouselConfig
-    ) {
+  constructor(public http: HttpClient) {
     this.http.get<any>(this.urlToJson).subscribe(response => {
       this.result = response;
     });
-
-    config.interval = 7000;
-		config.wrap = false;
-		config.keyboard = false;
-		config.pauseOnHover = false;
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  openModal(project: Object) {
+    const modal: HTMLDialogElement | null = document.querySelector('#projectModal');
+    if(this.modalOpen === true) {
+      this.projectSelected = [];
+    }
+
+    if (modal !== null) {
+      this.projectSelected?.push(project);
+      modal.showModal();
+      this.modalOpen = true;
+    } else {
+      alert("[error]: modal está vindo nulo");
+    }
   }
 
+  closeModal() {
+    const modal: HTMLDialogElement | null = document.querySelector('#projectModal');
+
+    if (modal !== null) {
+      this.modalOpen
+      this.projectSelected = [];
+      this.modalOpen = false;
+      modal.close();
+    } else {
+      alert("[error]: modal está vindo nulo");
+    }
+  }
 }
