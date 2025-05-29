@@ -1,3 +1,4 @@
+@use '../../../assets/sass/color'
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap')
 
 #title
@@ -8,14 +9,14 @@
     font-family: 'Caveat', cursive !important
 
 #body
-  background-color: #ffffff
+  background-color: color.$white
   display: flex
   justify-content: center
 
 
 .base
   .contents
-    background-color: #000
+    background-color: color.$black
     width: 30vw
     min-width: 400px
     heigth: 40vh
@@ -24,7 +25,7 @@
     padding-top: 1.5vh
 
     .content-screen
-      background-color: #ffffff
+      background-color: color.$white
       width: 90%
       height: 10vh
       margin: 0px 0px 3vh 5%
@@ -32,17 +33,15 @@
       font-size: 50px
       font-weight: 600
       text-align: center
-      padding-top: 20px
 
     .base-calculator
       display: flex
-      background-color: #fefefe
+      background-color: color.$black
 
       .content-numbers
-        background-color: #e4d5c0
+        background-color: color.$gray
         width: 24vw
         min-width: 320px
-        padding: 1vh 0px
 
         .numbers
           display: flex
@@ -50,10 +49,10 @@
 
           a
             text-decoration: none
-            color: #7c3b06
+            color: color.$white
 
             div
-              background-color: #cfcbcb
+              background-color: color.$black
               width: 6vw
               min-width: 70px
               margin: 1vh 1vw
@@ -62,14 +61,14 @@
               font-size: 30px
 
               &:hover
-                background-color: #f0eade
+                background-color: color.$dark-gray
 
             .zero
               width: 14vw
               min-width: 150px
 
     .content-buttons
-      background-color: #d1bfa3
+      background-color: color.$dark-gray
       width: 6vw
       min-width: 80px
       padding-top: 21.5vh
@@ -87,27 +86,27 @@
 
       .clear
         border: none
-        background-color: #d1bfa3
-        color: #d10d0d
+        background-color: color.$dark-gray
+        color: color.$black
 
         &:hover
-          border-bottom: 2px solid #d10d0d
+          border-bottom: 2px solid color.$black
           font-size: 22px
 
       .enter
         border: none
-        color: #7c3b06
+        color: color.$black
 
         &:hover
-          border-bottom: 2px solid #7c3b06
-          color: #7c3b06
+          border-bottom: 2px solid color.$black
+          color: color.$black
           font-size: 22px
 
 .operations
   width: 30vw
   min-width: 400px
   heigth: 40vh
-  background-color: #7c3b06
+  background-color: color.$black
   border-bottom-right-radius: 10px
   border-bottom-left-radius: 10px
   display: flex
@@ -117,21 +116,20 @@
     text-decoration: none
 
     div
-      background-color: #a58163
+      background-color: color.$white
       width: 5vw
       min-width: 70px
       height: 4vh
       margin: 1vh 1vw
       border-radius: 5px
       text-align: center
-      color: #ffffff
+      color: color.$black
 
       &:hover
-        background-color: #b99e88
-        color: #097a22
+        background-color: color.$white
+        color: color.$green
 
     .sum
-      padding-top: 2px
       font-size: 25px
 
       &:hover
@@ -144,7 +142,6 @@
         font-size: 32px
 
     .multiplication
-      padding-top: 3px
       font-size: 20px
 
       &:hover

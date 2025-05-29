@@ -1,4 +1,4 @@
-@use '../../assets/sass/variables'
+@use '../../assets/sass/color'
 @use '../../assets/sass/mixins-medium'
 
 *
@@ -14,7 +14,7 @@
 
   div
     position: absolute
-    border: 4px solid variables.$black
+    border: 4px solid color.$black
     opacity: 1
     border-radius: 50%
     animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite
@@ -61,7 +61,7 @@
     position: relative
     display: inline-block
     font-size: 40px
-    color: variables.$black
+    color: color.$black
     text-transform: uppercase
     animation: flip 2s infinite
     animation-delay: calc(.2s * var(--i))
@@ -70,7 +70,7 @@
     position: absolute
     display: inline-block
     font-size: 40px
-    color: variables.$black
+    color: color.$black
     text-transform: uppercase
 
 
@@ -98,7 +98,7 @@
         position: relative
         display: inline-block
         font-size: 40px
-        color: variables.$black
+        color: color.$black
         text-transform: uppercase
         animation: flip 2s infinite
         animation-delay: calc(.2s * var(--i))
@@ -107,5 +107,5 @@
         position: absolute
         display: inline-block
         font-size: 40px
-        color: variables.$black
+        color: color.$black
         text-transform: uppercase

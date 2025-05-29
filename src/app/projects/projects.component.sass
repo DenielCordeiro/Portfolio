@@ -1,10 +1,10 @@
-@use '../../assets/sass/variables'
+@use '../../assets/sass/color'
 @use '../../assets/sass/mixins-small'
 
 #title
   span
     margin-left: 69%
-    color: variables.$dark-gray
+    color: color.$dark-gray
 
     @include mixins-small.display
       margin-left: 0%
@@ -19,10 +19,10 @@
 
     .card
       align-items: center
-      color: variables.$black
+      color: color.$black
 
       &:hover
-        border: 1px solid variables.$black
+        border: 1px solid color.$black
 
       .images
         text-align: end
@@ -58,10 +58,10 @@
   .close-modal
     text-align: end
     font-size: 25px
-    color: variables.$black
+    color: color.$black
 
     &:hover
-      color: variables.$warn
+      color: color.$warn
 
   a
     text-decoration: none
@@ -69,7 +69,7 @@
   .img-modal
     height: 70vh
     width: 100%
-    border: 1px solid variables.$white
+    border: 1px solid color.$white
     border-radius: 2%
 
     @include mixins-small.display
@@ -88,7 +88,7 @@
   .see-project
     .information
       font-size: 25px
-      color: variables.$warn
+      color: color.$warn
 
     @include mixins-small.display
       display: none
