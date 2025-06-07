@@ -21,7 +21,8 @@ export class AppComponent implements OnInit {
 
   async doTimer() {
     for (let i = 0; i < this.counter; i++) {
-      await this.delay(1000);
+      // await this.delay(1000);
+      await this.delay(200);
       this.counter = this.counter - 1;
 
       if (this.counter == 7) {

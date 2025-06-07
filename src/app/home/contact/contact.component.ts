@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
   Instagram: string = 'https://www.instagram.com/deniel_leined/';
   gmail: string = 'dcordeiro962@gmail.com';
   email: string = 'https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwQLwLHHclqBLdzrsRVnkzFFftNjrCjSlXjSrsZndWSszHKWLpmbMWVfKCDkNVmjlLkfFFB';
-  linkedin: string = 'https://www.linkedin.com/in/daniel-de-souza-cordeiro-020915198/';
+  linkedin: string = 'https://www.linkedin.com/in/daniel-de-souza-cordeiro-dev';
 
   constructor(
     public http: HttpClient,
