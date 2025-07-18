@@ -6,7 +6,8 @@ import { ProjectModel } from '../models/project.model';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.sass']
+  styleUrls: ['./projects.component.sass'],
+  standalone: false
 })
 export class ProjectsComponent implements OnInit {
   urlToJson = 'assets/pt.json';

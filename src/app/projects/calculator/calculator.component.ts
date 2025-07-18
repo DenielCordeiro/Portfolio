@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.sass']
+  styleUrls: ['./calculator.component.sass'],
+  standalone: false
 })
 export class CalculatorComponent implements OnInit {
   valorInScreen: any = document.querySelector(".content-screen");
