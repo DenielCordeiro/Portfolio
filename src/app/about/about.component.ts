@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.sass']
+  styleUrls: ['./about.component.sass'],
+  standalone: false
 })
 export class AboutComponent implements OnInit {
   urlToJson = 'assets/pt.json';

@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-greetings',
   templateUrl: './greetings.component.html',
-  styleUrls: ['./greetings.component.sass']
+  styleUrls: ['./greetings.component.sass'],
+  standalone: false
 })
 export class GreetingsComponent implements OnInit {
   urlToJson = 'assets/pt.json';

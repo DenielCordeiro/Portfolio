@@ -1,23 +1,24 @@
-<div class="container" *ngIf="!greetings">
-  <div class="text-center">
-    <div class="row pt-3 header">
-      <app-header></app-header>
-    </div>
-
-    <div class="row pt-3 sidenav">
-      <app-sidenav></app-sidenav>
-    </div>
-
-    <div class="row mt-5">
-      <router-outlet></router-outlet>
+@if (!greetings) {
+  <div class="container">
+    <div class="text-center">
+      <div class="row pt-3 header">
+        <app-header></app-header>
+      </div>
+      <div class="row pt-3 sidenav">
+        <app-sidenav></app-sidenav>
+      </div>
+      <div class="row mt-5">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
-</div>
+}
 
-<div class="greetings" *ngIf="greetings">
-  <app-greetings></app-greetings>
-
-  <footer>
-    <app-footer></app-footer>
-  </footer>
-</div>
+@if (greetings) {
+  <div class="greetings">
+    <app-greetings></app-greetings>
+    <footer>
+      <app-footer></app-footer>
+    </footer>
+  </div>
+}

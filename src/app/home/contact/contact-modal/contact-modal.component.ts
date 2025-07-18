@@ -5,7 +5,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-contact-modal',
   templateUrl: './contact-modal.component.html',
-  styleUrls: ['./contact-modal.component.sass']
+  styleUrls: ['./contact-modal.component.sass'],
+  standalone: false
 })
 export class ContactModalComponent implements OnInit {
   form!: FormGroup;

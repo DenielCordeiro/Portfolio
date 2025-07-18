@@ -8,74 +8,82 @@
 <section id="projects-cards">
   <div class="container contents">
     <div class="row">
-      <div class="project" *ngFor="let project of projects">
-        <a (click)="openModal(project)">
-          <div class="card p-4">
-            <div class="row text-secundary">
-              <div class="col summary mx-2">
-                <summary>
-                  <span>{{ project.description }}</span>
-                </summary>
-              </div>
-              <div class="col text-center">
-                <h2>{{ project.name }}</h2>
-                <h6>{{ project.subtitle }}</h6>
-
-                <div class="images">
-                  <span class="mx-2" *ngIf="project.Typescript == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/> -</span>
-                  <span class="mx-2" *ngIf="project.Javascript == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> -</span>
-                  <span class="mx-2" *ngIf="project.html == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> -</span>
-                  <span class="mx-2" *ngIf="project.sass == true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/></span>
+      @for (project of projects; track project) {
+        <div class="project">
+          <a (click)="openModal(project)">
+            <div class="card p-4">
+              <div class="row text-secundary">
+                <div class="col summary mx-2">
+                  <summary>
+                    <span>{{ project.description }}</span>
+                  </summary>
+                </div>
+                <div class="col text-center">
+                  <h2>{{ project.name }}</h2>
+                  <h6>{{ project.subtitle }}</h6>
+                  <div class="images">
+                    @if (project.Typescript == true) {
+                      <span class="mx-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/> -</span>
+                    }
+                    @if (project.Javascript == true) {
+                      <span class="mx-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> -</span>
+                    }
+                    @if (project.html == true) {
+                      <span class="mx-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> -</span>
+                    }
+                    @if (project.sass == true) {
+                      <span class="mx-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/></span>
+                    }
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </a>
-
-        <hr class="my-3 mx-4">
-      </div>
+          </a>
+          <hr class="my-3 mx-4">
+        </div>
+      }
     </div>
   </div>
 
   <dialog id="projectModal">
-    <div class="projectSelected" *ngFor="let project of this.projectSelected">
-      <div class="row">
-        <div class="col-6">
-          <h2>{{ project.name }}</h2>
+    @for (project of this.projectSelected; track project) {
+      <div class="projectSelected">
+        <div class="row">
+          <div class="col-6">
+            <h2>{{ project.name }}</h2>
+          </div>
+          <div class="col-6 close-modal">
+            <span (click)="closeModal()">X</span>
+          </div>
         </div>
-
-        <div class="col-6 close-modal">
-          <span (click)="closeModal()">X</span>
+        <hr class="my-2">
+        <div class="row">
+          <img src="{{ project.image }}" alt="{{ project.name }}" class="img-modal">
+          <p class="description-modal">{{ project.description }}</p>
+        </div>
+        <hr class="mt-2 mb-3">
+        <div class="row buttons-modal">
+          <div class="col-4 see-project">
+            @if (project.page !== '') {
+              <button routerLink="/projects/{{ project.page }}" class="btn btn-primary">{{ result?.projects.seeProject }}</button>
+            }
+            @if (project.page === '') {
+              <a class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado">
+                <i class="bi bi-info-circle-fill"></i>
+              </a>
+            }
+            @if (project.page === '') {
+              <button class="btn btn-primary" [disabled]="project.page == ''">{{ result?.projects.seeProject }}</button>
+            }
+          </div>
+          <div class="col-4">
+            <a href="{{ project.github }}" target="_blank" class="btn btn-dark">{{ result?.projects.github }}</a>
+          </div>
+          <div class="col-4">
+            <button (click)="closeModal()" class="btn btn-secondary">{{ result?.projects.close }}</button>
+          </div>
         </div>
       </div>
-
-      <hr class="my-2">
-
-      <div class="row">
-        <img src="{{ project.image }}" alt="{{ project.name }}" class="img-modal">
-        <p class="description-modal">{{ project.description }}</p>
-      </div>
-
-      <hr class="mt-2 mb-3">
-
-      <div class="row buttons-modal">
-        <div class="col-4 see-project">
-          <button routerLink="/projects/{{ project.page }}" class="btn btn-primary" *ngIf="project.page !== ''">{{ result?.projects.seeProject }}</button>
-
-          <a class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado" *ngIf="project.page === ''">
-            <i class="bi bi-info-circle-fill"></i>
-          </a>
-          <button class="btn btn-primary" *ngIf="project.page === ''" [disabled]="project.page == ''">{{ result?.projects.seeProject }}</button>
-        </div>
-
-        <div class="col-4">
-          <a href="{{ project.github }}" target="_blank" class="btn btn-dark">{{ result?.projects.github }}</a>
-        </div>
-
-        <div class="col-4">
-          <button (click)="closeModal()" class="btn btn-secondary">{{ result?.projects.close }}</button>
-        </div>
-      </div>
-    </div>
+    }
   </dialog>
 </section>

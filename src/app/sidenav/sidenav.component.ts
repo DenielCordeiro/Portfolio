@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.sass']
+  styleUrls: ['./sidenav.component.sass'],
+  standalone: false
 })
 export class SidenavComponent implements OnInit {
 
