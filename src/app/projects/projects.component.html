@@ -7,40 +7,45 @@
 
 <section id="projects-cards">
   <div class="container contents">
-    <div class="row">
+    <div class="projects row">
       @for (project of projects; track project) {
-        <div class="project">
-          <a (click)="openModal(project)">
-            <div class="card p-4">
-              <div class="row text-secundary">
-                <div class="col summary mx-2">
-                  <summary>
-                    <span>{{ project.description }}</span>
-                  </summary>
-                </div>
-                <div class="col text-center">
-                  <h2>{{ project.name }}</h2>
-                  <h6>{{ project.subtitle }}</h6>
-                  <div class="images">
-                    @if (project.Typescript == true) {
-                      <span class="mx-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/> -</span>
-                    }
-                    @if (project.Javascript == true) {
-                      <span class="mx-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> -</span>
-                    }
-                    @if (project.html == true) {
-                      <span class="mx-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> -</span>
-                    }
-                    @if (project.sass == true) {
-                      <span class="mx-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/></span>
-                    }
-                  </div>
-                </div>
-              </div>
+        <div (click)="openModal(project)">
+          <div class="card">
+            <div class="summary mx-2">
+              <summary>
+                <span>{{ project.description }}</span>
+              </summary>
             </div>
-          </a>
-          <hr class="my-3 mx-4">
+
+            <div class="project-name">
+              <h2>{{ project.name }}</h2>
+              <h6>{{ project.subtitle }}</h6>
+              <div class="images">
+                @if (project.Typescript == true) {
+                  <span class="mx-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/>
+                  </span>
+                }
+                @if (project.Javascript == true) {
+                  <span class="mx-2">
+                    - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+                  </span>
+                }
+                @if (project.html == true) {
+                  <span class="mx-2">
+                    - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
+                  </span>
+                }
+                @if (project.sass == true) {
+                  <span class="mx-2">
+                    - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/>
+                  </span>
+                }
+              </div> 
+            </div>
+          </div>
         </div>
+        <hr class="my-3 mx-4">
       }
     </div>
   </div>

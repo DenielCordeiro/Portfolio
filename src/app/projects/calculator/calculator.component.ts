@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
   valorInScreen: any = document.querySelector(".content-screen");
   arrayValors: string[] = [];
+  recordingOfOperations: string[] = [];
   valorRemovedFromArray: string = '';
   sinal: string = '';
 
@@ -46,15 +47,32 @@ export class CalculatorComponent implements OnInit {
 
     if (this.sinal === '+') {
       this.valorInScreen = calculator.Sum(valors);
+      this.recordingOfOperations.push(`${valors.input1} + ${valors.input2} = ${this.valorInScreen}`);  
+      
+      
+      localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
+
       valors.input1 = calculator.Sum(valors);
     } else if (this.sinal === '-') {
       this.valorInScreen = calculator.Subtraction(valors);
+      this.recordingOfOperations.push(`${valors.input1} - ${valors.input2} = ${this.valorInScreen}`);  
+      
+      localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
+
       valors.input1 = calculator.Subtraction(valors);
     } else if (this.sinal === '*') {
       this.valorInScreen = calculator.Multiplication(valors);
+      this.recordingOfOperations.push(`${valors.input1} x ${valors.input2} = ${this.valorInScreen}`);  
+      
+      localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
+
       valors.input1 = calculator.Multiplication(valors);
     } else if (this.sinal === '/') {
       this.valorInScreen = calculator.Division(valors);
+      this.recordingOfOperations.push(`${valors.input1} / ${valors.input2} = ${this.valorInScreen}`);  
+      
+      localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
+
       valors.input1 = calculator.Division(valors);
     } else {
       alert("[ERROR !]: no operation signal has been entered");
@@ -76,14 +94,14 @@ export class CalculatorComponent implements OnInit {
     return valors;
   }
 
-  toCleanScreenContent() {
+  cleanScreenContent() {
     valors.input1 = 0;
 
     this.resetInputsAndSinal();
     this.valuesReset();
     this.valorInScreen = '';
     this.valorRemovedFromArray = '';
-  }
+  }  
 }
 
 export class Inputs {
@@ -95,7 +113,7 @@ export const valors = new Inputs();
 class Calculator {
   Sum(valors: Inputs): number {
     const resultSum = valors.input1 + valors.input2;
-
+    
     return parseFloat(resultSum.toFixed(2));
   }
 
@@ -117,4 +135,5 @@ class Calculator {
     return parseFloat(resultDivision.toFixed(2));
   }
 }
+
 const calculator = new Calculator();

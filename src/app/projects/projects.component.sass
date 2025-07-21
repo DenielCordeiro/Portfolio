@@ -14,23 +14,21 @@
   justify-content: center
   padding-bottom: 5vh
 
-  a
-    text-decoration: none
+  .card
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: color.$black
 
-    .card
-      align-items: center
-      color: color.$black
+    &:hover
+      border: 1px solid color.$black
 
-      &:hover
-        border: 1px solid color.$black
+    .images
+      text-align: end
 
-      .images
-        text-align: end
-
-        img
-          width: 30px
-          height: 30px
-
+      img
+        width: 30px
+        height: 30px
 
   hr
     width: 96%

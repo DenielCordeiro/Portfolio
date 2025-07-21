@@ -1,11 +1,14 @@
 @use '../../../assets/sass/color'
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap')
 
+*
+  margin: 0px
+  padding: 0px
+
 #title
   text-align: center
-  margin-top: 7vh
 
-  h1
+  h2
     font-family: 'Caveat', cursive !important
 
 #body
@@ -13,142 +16,133 @@
   display: flex
   justify-content: center
 
-
 .base
-  .contents
+  .content-screen
+    background-color: color.$white
+    border: 10px solid color.$black
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 400px
+    height: 80px
+    border-top-left-radius: 4px
+    border-top-right-radius: 4px
+    font-size: 50px
+    font-weight: 600
+
+  .base-calculator
+    display: flex
     background-color: color.$black
-    width: 30vw
-    min-width: 400px
-    heigth: 40vh
-    border-top-right-radius: 10px
-    border-top-left-radius: 10px
-    padding-top: 1.5vh
 
-    .content-screen
-      background-color: color.$white
-      width: 90%
-      height: 10vh
-      margin: 0px 0px 3vh 5%
-      border-radius: 4px
-      font-size: 50px
-      font-weight: 600
-      text-align: center
+    .content-numbers
+      background-color: color.$gray
+      width: 300px
 
-    .base-calculator
-      display: flex
-      background-color: color.$black
-
-      .content-numbers
-        background-color: color.$gray
-        width: 24vw
-        min-width: 320px
-
-        .numbers
+      .numbers
+        display: flex
+        justify-content: center
+        padding: 1vh 1vw
+        
+        .number-button
+          cursor: pointer
           display: flex
           justify-content: center
+          flex-direction: center
+          background-color: color.$black
+          color: color.$white
+          width: 60px
+          height: 60px
+          margin: 1vh 10px
+          padding-top: 7px
+          font-size: 30px
+          border-radius: 3px
 
-          a
-            text-decoration: none
-            color: color.$white
+          &:hover
+            background-color: color.$dark-gray
 
-            div
-              background-color: color.$black
-              width: 6vw
-              min-width: 70px
-              margin: 1vh 1vw
-              text-align: center
-              line-height: 75px
-              font-size: 30px
+        .zero
+          width: 140px
 
-              &:hover
-                background-color: color.$dark-gray
+  .content-buttons
+    background-color: color.$dark-gray
+    width: 100px
+    display: flex
+    flex-direction: column-reverse
 
-            .zero
-              width: 14vw
-              min-width: 150px
-
-    .content-buttons
-      background-color: color.$dark-gray
-      width: 6vw
-      min-width: 80px
-      padding-top: 21.5vh
-
-      a
-        text-decoration: none
-
-        div
-          width: 4.8vw
-          min-width: 65px
-          height: 5vh
-          text-align: center
-          font-size: 20px
-          margin: 2.5vh 0px 4vh 0.5vw
+    .buttons-calculator
+      text-align: center
+      min-width: 65px
+      height: 5vh
+      font-size: 15px
+      margin-bottom: 10px
 
       .clear
-        border: none
-        background-color: color.$dark-gray
-        color: color.$black
-
-        &:hover
-          border-bottom: 2px solid color.$black
-          font-size: 22px
-
-      .enter
+        cursor: pointer
         border: none
         color: color.$black
 
         &:hover
           border-bottom: 2px solid color.$black
-          color: color.$black
-          font-size: 22px
+          font-size: 17px
+
+      .calculate
+        cursor: pointer
+        border: none
+        color: color.$black
+
+        &:hover
+          border-bottom: 2px solid color.$black
+          font-size: 17px
 
 .operations
-  width: 30vw
-  min-width: 400px
-  heigth: 40vh
-  background-color: color.$black
-  border-bottom-right-radius: 10px
-  border-bottom-left-radius: 10px
   display: flex
   justify-content: center
+  align-items: center
+  background-color: color.$black
+  width: 400px
+  padding: 2vh 0px
+  border-bottom-right-radius: 10px
+  border-bottom-left-radius: 10px
+  margin-bottom: 4vh
+ 
+  .operator
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    background-color: color.$white
+    color: color.$black
+    width: 40px 
+    height: 35px
+    margin: 0px 1.5vw
+    border-radius: 5px
 
-  a
-    text-decoration: none
-
-    div
+    &:hover
       background-color: color.$white
-      width: 5vw
-      min-width: 70px
-      height: 4vh
-      margin: 1vh 1vw
-      border-radius: 5px
-      text-align: center
-      color: color.$black
+      color: color.$green
 
-      &:hover
-        background-color: color.$white
-        color: color.$green
+  .sum
+    padding-top: 2px
+    font-size: 23px
 
-    .sum
+    &:hover
       font-size: 25px
 
-      &:hover
-        font-size: 27px
+  .subtraction
+    font-size: 30px
 
-    .subtraction
-      font-size: 30px
+    &:hover
+      font-size: 32px
 
-      &:hover
-        font-size: 32px
+  .multiplication
+    font-size: 18px
 
-    .multiplication
+    &:hover
       font-size: 20px
 
-      &:hover
-        font-size: 22px
+  .division
+    padding-top: 2px
+    font-size: 26px
 
-    .division
+    &:hover
       font-size: 28px
-
-      &:hover
-        font-size: 30px

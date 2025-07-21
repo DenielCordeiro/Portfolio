@@ -1,5 +1,5 @@
 <section id="title">
-  <h1>Basic Calculator</h1>
+  <h2>Basic Calculator</h2>
 </section>
 
 <section id="body">
@@ -10,45 +10,61 @@
       <div class="base-calculator">
         <div class="content-numbers">
           <div class="numbers">
-            <a (click)="numberSelected('1')"><div>1</div></a>
-            <a (click)="numberSelected('2')"><div>2</div></a>
-            <a (click)="numberSelected('3')"><div>3</div></a>
+            <div class="number-button" (click)="numberSelected('1')">1</div>
+            <div class="number-button" (click)="numberSelected('2')">2</div>
+            <div class="number-button" (click)="numberSelected('3')">3</div>
           </div>
 
           <div class="numbers">
-            <a (click)="numberSelected('4')"><div>4</div></a>
-            <a (click)="numberSelected('5')"><div>5</div></a>
-            <a (click)="numberSelected('6')"><div>6</div></a>
+            <div class="number-button" (click)="numberSelected('4')">4</div>
+            <div class="number-button" (click)="numberSelected('5')">5</div>
+            <div class="number-button" (click)="numberSelected('6')">6</div>
           </div>
 
           <div class="numbers">
-            <a (click)="numberSelected('7')"><div>7</div></a>
-            <a (click)="numberSelected('8')"><div>8</div></a>
-            <a (click)="numberSelected('9')"><div>9</div></a>
+            <div class="number-button" (click)="numberSelected('7')">7</div>
+            <div class="number-button" (click)="numberSelected('8')">8</div>
+            <div class="number-button" (click)="numberSelected('9')">9</div>
           </div>
 
           <div class="numbers">
-            <a (click)="numberSelected('0')"><div class="zero">0</div></a>
-            <a (click)="numberSelected('.')"><div>.</div></a>
+            <div class="number-button zero" (click)="numberSelected('0')">0</div>
+            <div class="number-button" (click)="numberSelected('.')">.</div>
           </div>
         </div>
 
         <div class="content-buttons">
-          <a (click)="toCleanScreenContent()">
-            <div class="clear">Clear</div>
-          </a>
-          <a (click)="result()">
-            <div class="enter">Enter</div>
-          </a>
+          <div class="buttons-calculator" (click)="cleanScreenContent()">
+            <div class="clear">
+              <span>Clear</span>
+            </div>
+          </div>
+
+          <div class="buttons-calculator" (click)="result()">
+            <div class="calculate">
+              <span>Calculate</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="operations">
-      <a (click)="operations('-')"><div class="subtraction">-</div></a>
-      <a (click)="operations('+')"><div class="sum">+</div></a>
-      <a (click)="operations('*')"><div class="multiplication">x</div></a>
-      <a (click)="operations('/')"><div class="division">&#247;</div></a>
+      <div class="operator subtraction" (click)="operations('-')">
+        <span>-</span>
+      </div>
+
+      <div class="operator sum" (click)="operations('+')">
+        <span>+</span>
+      </div>
+      
+      <div class="operator multiplication" (click)="operations('*')">
+        <span>x</span>
+      </div>
+
+      <div class="operator division" (click)="operations('/')">
+        <span>&#247;</span>
+      </div>
     </div>
   </div>
 </section>
