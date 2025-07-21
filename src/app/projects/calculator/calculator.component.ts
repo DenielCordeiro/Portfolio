@@ -101,9 +101,7 @@ export class CalculatorComponent implements OnInit {
     this.valuesReset();
     this.valorInScreen = '';
     this.valorRemovedFromArray = '';
-  }
-
-  
+  }  
 }
 
 export class Inputs {

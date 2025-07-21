@@ -7,7 +7,6 @@
 
 #title
   text-align: center
-  margin-top: 2vh
 
   h2
     font-family: 'Caveat', cursive !important
@@ -17,18 +16,19 @@
   display: flex
   justify-content: center
 
-
 .base
   .content-screen
     background-color: color.$white
     border: 10px solid color.$black
-    width: 150x
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 400px
     height: 80px
     border-top-left-radius: 4px
     border-top-right-radius: 4px
     font-size: 50px
     font-weight: 600
-    text-align: center
 
   .base-calculator
     display: flex
@@ -41,25 +41,27 @@
       .numbers
         display: flex
         justify-content: center
+        padding: 1vh 1vw
         
         .number-button
-          background-color: color.$black
           cursor: pointer
-          text-align: center
-          justify-content: center
           display: flex
-          align-itens: center
+          justify-content: center
+          flex-direction: center
+          background-color: color.$black
           color: color.$white
-          width: 5vw
-          height: 10vh
-          margin: 1vh 1vw
-          font-size: 25px
+          width: 60px
+          height: 60px
+          margin: 1vh 10px
+          padding-top: 7px
+          font-size: 30px
+          border-radius: 3px
 
           &:hover
             background-color: color.$dark-gray
 
         .zero
-          width: 12vw
+          width: 140px
 
   .content-buttons
     background-color: color.$dark-gray
@@ -96,10 +98,9 @@
   display: flex
   justify-content: center
   align-items: center
-  width: 30vw
-  min-width: 400px
-  heigth: 20px
   background-color: color.$black
+  width: 400px
+  padding: 2vh 0px
   border-bottom-right-radius: 10px
   border-bottom-left-radius: 10px
   margin-bottom: 4vh
@@ -111,9 +112,9 @@
     cursor: pointer
     background-color: color.$white
     color: color.$black
-    width: 45px
+    width: 40px 
     height: 35px
-    margin: 1.5vh 3vw
+    margin: 0px 1.5vw
     border-radius: 5px
 
     &:hover
@@ -144,4 +145,4 @@
     font-size: 26px
 
     &:hover
-      font-size: 38px
+      font-size: 28px
