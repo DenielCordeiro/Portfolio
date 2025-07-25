@@ -17,11 +17,12 @@
   .card
     display: flex
     flex-direction: row
-    align-items: center
-    color: color.$black
 
     &:hover
       border: 1px solid color.$black
+
+    .summary
+      text-align: justify
 
     .images
       text-align: end
@@ -32,16 +33,6 @@
 
   hr
     width: 96%
-
-  .summary
-    text-align: justify
-
-    @include mixins-small.display
-      display: none
-
-      summary
-        display: flex
-
 
 .projectSelected
   height: 100%
