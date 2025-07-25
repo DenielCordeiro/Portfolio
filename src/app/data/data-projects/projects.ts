@@ -2,7 +2,7 @@ const projectData = [
   {
     id: 0,
     name: 'Luz Violeta Macrãme',
-    subtitle: 'Desenvolvida em Angular e Express.js com MongoDB',
+    subtitle: 'Desenvolvido em Angular e Express.js com MongoDB',
     description: '',
     image: '',
     github: '',

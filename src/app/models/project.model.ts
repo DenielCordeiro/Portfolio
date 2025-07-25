@@ -8,8 +8,8 @@ export class ProjectModel {
     public image?: string,
     public github?: string,
     public page?: string,
-    public Typescript?: boolean,
-    public Javascript?: boolean,
+    public typescript?: boolean,
+    public javascript?: boolean,
     public html?: boolean,
     public sass?: boolean,
   ) {}

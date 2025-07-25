@@ -9,20 +9,22 @@
     @include mixins-small.display
       margin-left: 0%
 
-.contents
+.projects
   display: flex
-  justify-content: center
+  flex-direction: column
   padding-bottom: 5vh
 
   .card
     display: flex
     flex-direction: row
+    justify-content: space-around
 
     &:hover
       border: 1px solid color.$black
 
     .summary
       text-align: justify
+      width: 50%
 
     .images
       text-align: end
