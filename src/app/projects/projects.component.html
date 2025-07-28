@@ -1,18 +1,19 @@
 <section id="title">
-  <div class="container text-start">
+  <div class="container text-start mb-2">
     <h2>{{ result?.projects.title }}</h2>
-    <span><strong>*</strong> Clique sobre o projeto para mais informações <strong>!</strong></span>
+
+    <span>
+      <b>*</b>Clique sobre o projeto para mais informações<b>!</b>
+    </span>
   </div>
 </section>
 
 <section id="projects-cards">
   <div *ngFor="let project of this.projects" class="projects">
-    <div (click)="openModal(project)" class="card">
-      <div class="summary">
-        <summary>
-          <span>{{ project.description }}</span>
-        </summary>
-      </div>
+    <div class="card" (click)="openModal(project)">
+      <summary>
+        <span>{{ project.description }}</span>
+      </summary>
 
       <div class="project-name">
         <h2>{{ project.name }}</h2>
@@ -37,7 +38,7 @@
       </div>
     </div>
 
-    <hr class="my-3 mx-4">
+    <hr class="mx-3">
   </div>
 
   <dialog id="projectModal">
