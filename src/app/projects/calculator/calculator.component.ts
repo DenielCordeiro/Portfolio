@@ -45,38 +45,35 @@ export class CalculatorComponent implements OnInit {
       valors.input2 = Number(this.valorRemovedFromArray);
     }
 
-    if (this.sinal === '+') {
-      this.valorInScreen = calculator.Sum(valors);
-      this.recordingOfOperations.push(`${valors.input1} + ${valors.input2} = ${this.valorInScreen}`);  
-      
-      
-      localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
+    let operationResult;
+    let operationSymbol;
 
-      valors.input1 = calculator.Sum(valors);
-    } else if (this.sinal === '-') {
-      this.valorInScreen = calculator.Subtraction(valors);
-      this.recordingOfOperations.push(`${valors.input1} - ${valors.input2} = ${this.valorInScreen}`);  
-      
-      localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
-
-      valors.input1 = calculator.Subtraction(valors);
-    } else if (this.sinal === '*') {
-      this.valorInScreen = calculator.Multiplication(valors);
-      this.recordingOfOperations.push(`${valors.input1} x ${valors.input2} = ${this.valorInScreen}`);  
-      
-      localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
-
-      valors.input1 = calculator.Multiplication(valors);
-    } else if (this.sinal === '/') {
-      this.valorInScreen = calculator.Division(valors);
-      this.recordingOfOperations.push(`${valors.input1} / ${valors.input2} = ${this.valorInScreen}`);  
-      
-      localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
-
-      valors.input1 = calculator.Division(valors);
-    } else {
-      alert("[ERROR !]: no operation signal has been entered");
+    switch (this.sinal) {
+      case '+':
+        operationResult = calculator.Sum(valors);
+        operationSymbol = '+';
+        break;
+      case '-':
+        operationResult = calculator.Subtraction(valors);
+        operationSymbol = '-';
+        break;
+      case '*':
+        operationResult = calculator.Multiplication(valors);
+        operationSymbol = 'x';
+        break;
+      case '/':
+        operationResult = calculator.Division(valors);
+        operationSymbol = '/';
+        break;
+      default:
+        alert("[ERROR !]: no operation signal has been entered");
+        return;
     }
+
+    this.valorInScreen = operationResult;
+    this.recordingOfOperations.push(`${valors.input1} ${operationSymbol} ${valors.input2} = ${this.valorInScreen}`);
+    localStorage.setItem('registration: ', JSON.stringify(this.recordingOfOperations));
+    valors.input1 = operationResult;
 
     this.resetInputsAndSinal();
     this.valuesReset();

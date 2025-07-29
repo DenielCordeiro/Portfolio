@@ -1,5 +1,4 @@
-@use '../../../assets/sass/mixins-small'
-@use '../../../assets/sass/mixins-medium'
+@use '../../../assets/sass/display'
 
 .contact
   display: flex
@@ -8,7 +7,7 @@
 .contact-mobile
   display: none
 
-@include mixins-small.display
+@include display.mobile
   .contact
     display: none
 
@@ -18,7 +17,7 @@
     .text-contact
       font-size: 8pt
 
-@include mixins-medium.display
+@include display.hd
   .contact
     display: none
 

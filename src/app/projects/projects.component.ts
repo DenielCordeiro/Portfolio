@@ -26,6 +26,7 @@ export class ProjectsComponent implements OnInit {
 
   openModal(project: Object) {
     const modal: HTMLDialogElement | null = document.querySelector('#projectModal');
+
     if(this.modalOpen === true) {
       this.projectSelected = [];
     }
