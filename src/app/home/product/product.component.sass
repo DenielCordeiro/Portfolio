@@ -1,5 +1,4 @@
-@use '../../../assets/sass/mixins-small'
-@use '../../../assets/sass/mixins-medium'
+@use  '../../../assets/sass/display.sass' as display
 
 a
   text-decoration: none
@@ -16,18 +15,18 @@ a
 .modal
   text-decoration: none
 
-@include mixins-small.display
-  .card
-    width: 100%
+  @include display.mobile
+    .card
+      width: 100%
 
-    img
-      margin-left: 2vw
-      max-width: 95.5%
+      img
+        margin-left: 2vw
+        max-width: 95.5%
 
-@include mixins-medium.display
-  .card
-    width: 100%
+  @include display.hd
+    .card
+      width: 100%
 
-    img
-      margin-left: 2vw
-      max-width: 95.5%
+      img
+        margin-left: 2vw
+        max-width: 95.5%

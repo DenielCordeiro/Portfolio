@@ -1,13 +1,10 @@
 @use '../../assets/sass/color'
-@use '../../assets/sass/mixins-small'
+@use '../../assets/sass/display'
 
 #title
   span
     margin-left: 69%
     color: color.$dark-gray
-
-    @include mixins-small.display
-      margin-left: 0%
 
 .projects
   display: flex
@@ -41,9 +38,6 @@
   height: 100%
   width: 67vw
 
-  @include mixins-small.display
-    width: 80vw
-
   h2
     text-align: justify
 
@@ -64,25 +58,10 @@
     border: 1px solid color.$white
     border-radius: 2%
 
-    @include mixins-small.display
-      display: none
-
   .description-modal
     display: none
-
-    @include mixins-small.display
-      display: inline
-
-  .buttons-modal
-    @include mixins-small.display
-      justify-content: end
 
   .see-project
     .information
       font-size: 25px
       color: color.$warn
-
-    @include mixins-small.display
-      display: none
-
-

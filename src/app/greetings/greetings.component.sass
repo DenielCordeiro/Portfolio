@@ -1,5 +1,5 @@
 @use '../../assets/sass/color'
-@use '../../assets/sass/mixins-medium'
+@use '../../assets/sass/display'
 
 *
   padding: 0
@@ -64,7 +64,7 @@
     color: color.$black
     text-transform: uppercase
     animation: flip 2s infinite
-    animation-delay: calc(.2s * var(--i))
+    animation-delay: calc(.3s * var(--i))
 
   .text
     position: absolute
@@ -81,13 +81,13 @@
 
 
 .welcome
-  @include mixins-medium.display
+  @include display.hd
     display: none
 
 .welcome-mobile
   display: none
 
-  @include mixins-medium.display
+  @include display.hd
     display: inline
 
     .waviy-mobile
@@ -101,7 +101,7 @@
         color: color.$black
         text-transform: uppercase
         animation: flip 2s infinite
-        animation-delay: calc(.2s * var(--i))
+        animation-delay: calc(.3s * var(--i))
 
       .text
         position: absolute

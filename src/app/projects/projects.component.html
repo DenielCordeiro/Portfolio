@@ -16,7 +16,7 @@
       </summary>
 
       <div class="project-name">
-        <h2>{{ project.name }}</h2>
+        <h3>{{ project.name }}</h3>
         <h6>{{ project.subtitle }}</h6>
         <div class="images">
           <span class="mx-2" *ngIf="project.typescript == true">
@@ -41,22 +41,26 @@
     <hr class="mx-3">
   </div>
 
-  <dialog id="projectModal">
-    <div class="projectSelected" *ngFor="let project of this.projectSelected">
-      <div class="row">
-        <div class="col-6">
+  <dialog id="projectModal" class="projectSelected">
+    <div  *ngFor="let project of this.projectSelected">
+      <div class="header-modal row">
+        <div class="col-8">
           <h2>{{ project.name }}</h2>
         </div>
-        <div class="col-6 close-modal">
+        <div class="col-4 close-modal">
           <span (click)="closeModal()">X</span>
         </div>
       </div>
+
       <hr class="my-2">
+
       <div class="row">
         <img src="{{ project.image }}" alt="{{ project.name }}" class="img-modal">
         <p class="description-modal">{{ project.description }}</p>
       </div>
+
       <hr class="mt-2 mb-3">
+
       <div class="row buttons-modal">
         <div class="col-4 see-project">
           @if (project.page !== '') {
