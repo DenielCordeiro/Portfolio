@@ -63,17 +63,13 @@
 
       <div class="row buttons-modal">
         <div class="col-4 see-project">
-          @if (project.page !== '') {
-            <button routerLink="/projects/{{ project.page }}" class="btn btn-primary">{{ result?.projects.seeProject }}</button>
-          }
-          @if (project.page === '') {
-            <a class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado">
-              <i class="bi bi-info-circle-fill"></i>
-            </a>
-          }
-          @if (project.page === '') {
-            <button class="btn btn-primary" [disabled]="project.page == ''">{{ result?.projects.seeProject }}</button>
-          }
+          <button *ngIf="project.page !== ''" routerLink="/projects/{{ project.page }}" class="btn btn-primary">{{ result?.projects.seeProject }}</button>
+          
+          <a *ngIf="project.page === ''" class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado">
+            <i class="bi bi-info-circle-fill"></i>
+          </a>
+
+          <button *ngIf="project.page === ''" class="btn btn-primary" [disabled]="project.page == ''">{{ result?.projects.seeProject }}</button>
         </div>
         <div class="col-4">
           <a href="{{ project.github }}" target="_blank" class="btn btn-dark">{{ result?.projects.github }}</a>
