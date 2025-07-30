@@ -1,6 +1,6 @@
 [build]
   command = "ng build"
-  publish = "dist/<nome-do-seu-projeto>"
+  publish = "dist/portfolio"
 
 [build.environment]
   NODE_VERSION = "18.20.0"
