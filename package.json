@@ -39,5 +39,13 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "5.3.3"
-  }
+  },
+  "engines": {
+    "node": ">=18.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DenielCordeiro/Portfolio.git"
+  },
+  "license": "MIT"
 }
