@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { IconReturnComponent } from '../icon-return/icon-return.component';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.sass'],
-  standalone: false
+  standalone: true,
+  imports: [IconReturnComponent]
 })
 export class CalculatorComponent implements OnInit {
   valorInScreen: any = document.querySelector(".content-screen");

@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-modal',
   templateUrl: './contact-modal.component.html',
   styleUrls: ['./contact-modal.component.sass'],
-  standalone: false
+  standalone: true,
+  imports: [ReactiveFormsModule]
 })
 export class ContactModalComponent implements OnInit {
   form!: FormGroup;

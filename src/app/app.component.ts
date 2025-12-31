@@ -1,33 +1,42 @@
 import { Component, OnInit} from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { FooterComponent } from './footer/footer.component';
+import { GreetingsComponent } from './greetings/greetings.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
-  standalone: false
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    SidenavComponent,
+    FooterComponent,
+    GreetingsComponent
+  ],
 })
 export class AppComponent implements OnInit {
-  expirationCounter: any;
-  counter: number = 15;
+  counter: number = 3;
   greetings: boolean = true;
 
   ngOnInit(): void {
-    this.doTimer();
-  }
+    this.startCountdown();
+  }  
 
-  delay(delay: number) {
-    return new Promise(r => {
-        setTimeout(r, delay);
+  private delay(delay: number) {
+    return new Promise<void>(resolve => {
+        setTimeout(resolve, delay);
     })
   }
 
-  async doTimer() {
-    for (let i = 0; i < this.counter; i++) {
-      await this.delay(900);
-      this.counter = this.counter - 1;
+  private async startCountdown() {
+    while (this.counter > 0) {
+      await this.delay(1000);
+      this.counter --;
+    } 
 
-      if (this.counter == 7) {
-        this.greetings = false;
-      }
-    }
+    this.greetings = false;
   }
 }

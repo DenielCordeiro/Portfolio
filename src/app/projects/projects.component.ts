@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import  projectsData  from '../data/data-projects/projects'
 import { ProjectModel } from '../models/project.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.sass'],
-  standalone: false
+  standalone: true,
+  imports: [RouterLink]
 })
 export class ProjectsComponent implements OnInit {
   urlToJson = 'assets/pt.json';

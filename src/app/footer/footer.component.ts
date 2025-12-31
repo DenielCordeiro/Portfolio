@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.sass'],
-  standalone: false
+  standalone: true,
 })
 export class FooterComponent implements OnInit {
   urlToJson = 'assets/pt.json';

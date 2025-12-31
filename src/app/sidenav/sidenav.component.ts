@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.sass'],
-  standalone: false
+  standalone: true,
+  imports: [RouterLink]
 })
 export class SidenavComponent implements OnInit {
 

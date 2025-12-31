@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { DesignsComponent } from './designs/designs.component';
+import { ProductComponent } from './product/product.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass'],
-  standalone: false
+  standalone: true,
+  imports: [
+    DesignsComponent,
+    ProductComponent,
+    ContactComponent
+  ]
 })
-export class HomeComponent implements OnInit {
-
+export class HomeComponent {
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
-
 }

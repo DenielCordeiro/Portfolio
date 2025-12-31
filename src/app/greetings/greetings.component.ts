@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-greetings',
   templateUrl: './greetings.component.html',
   styleUrls: ['./greetings.component.sass'],
-  standalone: false
 })
 export class GreetingsComponent implements OnInit {
   urlToJson = 'assets/pt.json';
-  result: any;
+  supplementaryTextForGreetings: string = '';
 
   constructor(public http: HttpClient) {
     this.http.get<any>(this.urlToJson).subscribe(response => {
-      this.result = response;
+      this.supplementaryTextForGreetings = response?.greetings;
+      console.log(this.supplementaryTextForGreetings);
     });
   }
 

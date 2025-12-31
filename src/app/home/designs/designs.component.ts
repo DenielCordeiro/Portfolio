@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-designs',
   templateUrl: './designs.component.html',
   styleUrls: ['./designs.component.sass'],
-  standalone: false
+  standalone: true,
 })
 export class DesignsComponent implements OnInit {
   urlToJson = 'assets/pt.json';

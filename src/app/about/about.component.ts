@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { TecnologyComponent } from './tecnology/tecnology.component';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.sass'],
-  standalone: false
+  standalone: true,
+  imports: [TecnologyComponent]
 })
 export class AboutComponent implements OnInit {
   urlToJson = 'assets/pt.json';

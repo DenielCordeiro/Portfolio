@@ -9,40 +9,26 @@
 </section>
 
 <section id="projects-cards">
-  <div *ngFor="let project of this.projects" class="projects">
-    <div class="card" (click)="openModal(project)">
-      <summary>
-        <span>{{ project.description }}</span>
-      </summary>
+  @for (project of projects; track project) {
+    <div class="projects">
+      <div class="card" (click)="openModal(project)">
+        <summary>
+          <span>{{ project.description }}</span>
+        </summary>
 
-      <div class="project-name">
-        <h3>{{ project.name }}</h3>
-        <h6>{{ project.subtitle }}</h6>
-        <div class="images">
-          <span class="mx-2" *ngIf="project.typescript == true">
-            - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/>
-          </span>
-
-          <span class="mx-2" *ngIf="project.javascript == true">
-            - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
-          </span>
-        
-          <span class="mx-2" *ngIf="project.html == true">
-            - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
-          </span>
-        
-          <span class="mx-2" *ngIf="project.sass == true">
-            - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/>
-          </span>
-        </div> 
+        <div class="project-name">
+          <h3>{{ project.name }}</h3>
+          <h6>{{ project.subtitle }}</h6>
+        </div>
       </div>
-    </div>
 
-    <hr class="mx-3">
-  </div>
+      <hr class="mx-3">
+    </div>
+  }
+  
 
   <dialog id="projectModal" class="projectSelected">
-    <div  *ngFor="let project of this.projectSelected">
+    @for (project of projectSelected; track project) {
       <div class="header-modal row">
         <div class="col-8">
           <h2>{{ project.name }}</h2>
@@ -63,13 +49,17 @@
 
       <div class="row buttons-modal">
         <div class="col-4 see-project">
-          <button *ngIf="project.page !== ''" routerLink="/projects/{{ project.page }}" class="btn btn-primary">{{ result?.projects.seeProject }}</button>
+          @if (project.page !== '') {
+            <button routerLink="/projects/{{ project.page }}" class="btn btn-primary">{{ result?.projects.seeProject }}</button>
+          }
           
-          <a *ngIf="project.page === ''" class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado">
-            <i class="bi bi-info-circle-fill"></i>
-          </a>
+          @if (project.page === '') {
+            <a class="information mx-2" placement="top" ngbTooltip="Projeto ainda não adicionado">
+              <i class="bi bi-info-circle-fill"></i>
+            </a>
 
-          <button *ngIf="project.page === ''" class="btn btn-primary" [disabled]="project.page == ''">{{ result?.projects.seeProject }}</button>
+            <button class="btn btn-primary" [disabled]="project.page == ''">{{ result?.projects.seeProject }}</button>
+          }
         </div>
         <div class="col-4">
           <a href="{{ project.github }}" target="_blank" class="btn btn-dark">{{ result?.projects.github }}</a>
@@ -78,6 +68,6 @@
           <button (click)="closeModal()" class="btn btn-secondary">{{ result?.projects.close }}</button>
         </div>
       </div>
-    </div>
+    }
   </dialog>
 </section>

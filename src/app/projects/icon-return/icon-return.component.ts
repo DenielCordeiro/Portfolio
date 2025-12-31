@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-icon-return',
   templateUrl: './icon-return.component.html',
   styleUrls: ['./icon-return.component.sass'],
-  standalone: false
+  standalone: true,
 })
 export class IconReturnComponent implements OnInit {
 
